@@ -1,0 +1,116 @@
+.reboot {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: #697477;
+  background-color: rgb(243, 243, 243);
+  min-height: 100vh;
+}
+
+.fontLogo {
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: -1px;
+  word-spacing: -1px;
+}
+
+.navBarFontSize {
+  font-size: 1.5rem;
+}
+
+.fontTitle {
+  font-family: 'Raleway', sans-serif;
+}
+
+.bgPrimary {
+  background-color: rgb(252, 252, 252);
+}
+
+.spinner {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+}
+
+.plus-minus-button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.button-custom {
+  border-color: lightgray;
+  color: gray;
+}
+
+.disabled-custom {
+  background-color: darkgrey;
+  border-color: darkgrey;
+}
+
+.discounted {
+  color: darkgrey;
+}
+
+.bg-cart-card-footer {
+  background-color: rgb(243, 243, 243);
+}
+
+.ok-color {
+  border-color: teal;
+  color: teal;
+}
+
+.card-img-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.card-img-wrap:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+.card-img-wrap img {
+  transition: transform 0.25s;
+  width: 100%;
+}
+.card-img-wrap:hover img {
+  transform: scale(1.05);
+}
+.card-img-wrap:hover:after {
+  opacity: 1;
+}
+
+.badge-cart-widget {
+  background-color: grey;
+}
+
+.img-appear {
+  width: 100%;
+  height: 100%;
+}
+
+.custom-footer {
+  height: 10vh;
+}
+
+.vh-5 {
+  height: 7vh;
+}
+
+.min-vh-85 {
+  min-height: 83vh;
+}
+.min-vh-75 {
+  min-height: 75vh;
+}
