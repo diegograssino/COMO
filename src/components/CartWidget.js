@@ -11,7 +11,7 @@ function CartWidget() {
       <Link to="/cart">
         <div className="me-1 d-inline-block">
           <div className="border border-0 btn btn-primary position-relative p-0">
-            <FaShoppingCart className="text-light fs-5" />
+            <FaShoppingCart className="text-light fs-5"  />
             {context.totalQ ? (
               <span className="position-absolute top-25 start-75 badge rounded-pill badge-cart-widget p-1">
                 {context.totalQ}
