@@ -7,6 +7,8 @@
   background-color: rgb(243, 243, 243);
   min-height: 100vh;
 }
+
+/* nav */
 .logo1{
   display: none;
 }
@@ -20,7 +22,7 @@
 }
 
 .navBarFontSize {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .fontTitle {
@@ -30,7 +32,30 @@
 .bgPrimary {
   background-color: #000000;
 }
+/* home */
 
+.containerHome{
+  background-image: url("../assets/img/verdu.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+
+}
+.tituloHome{
+  color: #ffffff;
+  font-size: 4.5em;
+  font-weight: 700;
+}
+
+.back{
+  background-color: #00000050;
+  
+}
+.btnHome{
+  width: 200px !important;
+ margin: auto;
+}
 .spinner {
   width: 100vw;
   height: 100vh;
@@ -127,5 +152,26 @@
   }
   .logo2 {
     display: none;
+  }
+  .tituloHome{
+    font-size: 3.5em;
+  
+  }
+}
+@media (max-width: 768px) {
+  .tituloHome{
+    font-size: 3em;
+  }
+}
+
+@media (max-width: 576px) {
+  .tituloHome{
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .subTitle{
+    font-size: 0.8em;
   }
 }

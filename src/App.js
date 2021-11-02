@@ -7,12 +7,15 @@ import Cart from './components/Cart';
 import { BrowserRouter, Route } from 'react-router-dom';
 import CartContext from './contexts/CartContext';
 import Footer from './components/Footer';
+import Home from './components/Home';
 
 function App() {
   return (
     <CartContext>
       <BrowserRouter>
         <MyNavbar />
+        
+        <Route path="/" component={Home} exact />
         <Route path="/" component={ItemListContainer} exact />
         <Route path="/category/:id" component={ItemListContainer} exact />
         <Route path="/item/:id" component={ItemDetailContainer} exact />
