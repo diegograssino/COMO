@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Navbar, Container, Row, Col, Nav } from 'react-bootstrap';
 import { default as myLogo } from '../assets/oldlogo.svg';
+import logo from "../assets/img/Logo-COMO.png";
 import CartWidget from './CartWidget';
 import CategoryWidget from './CategoryWidget';
 import { Link } from 'react-router-dom';
 import { firestore } from '../firebase';
-import { LinkContainer } from 'react-router-bootstrap';
+
 
 
 function MyNavbar() {
@@ -44,13 +45,14 @@ function MyNavbar() {
             </Nav>
           <Navbar.Brand className=" logo2 me-auto ">
             <Link to="/">
-              <img alt="Foodhouse" src={myLogo} width="35rem" height="35rem" className="pb-2" />
+              
+              <img alt="Foodhouse" src={logo} width="100rem"  />
             </Link>
           </Navbar.Brand>
           </Navbar.Collapse>
             <Navbar.Brand className=" logo1 ">
             <Link to="/">
-              <img alt="Foodhouse" src={myLogo} width="35rem" height="35rem" className="pb-2" />
+              <img alt="Foodhouse" src={logo} width="70rem" height="25rem"  />
             </Link>
           </Navbar.Brand>
           <CartWidget />
