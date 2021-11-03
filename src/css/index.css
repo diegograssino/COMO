@@ -7,7 +7,11 @@
   background-color: rgb(243, 243, 243);
   min-height: 100vh;
 }
-
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 /* nav */
 .logo1{
   display: none;
@@ -49,13 +53,37 @@
 }
 
 .back{
-  background-color: #00000050;
+  background-color: #00000086;
   
 }
 .btnHome{
   width: 200px !important;
  margin: auto;
 }
+/* about */
+.carrusellMovil{
+  display: none;
+}
+.aboutContainer{
+  padding: 50px 130px;
+}
+.tituloAbout{
+  font-size: 2.5em;
+  font-weight: 500;
+}
+.subtituloAbout{
+  font-size: 1.2em;
+  font-weight: 400;
+}
+.containerFoto{
+  width: 100%;
+  min-height: 456px;
+display: block;
+object-fit: cover;
+
+}
+
+
 .spinner {
   width: 100vw;
   height: 100vh;
@@ -157,16 +185,47 @@
     font-size: 3.5em;
   
   }
+  .aboutContainer{
+    padding: 50px 20px;
+  }
 }
 @media (max-width: 768px) {
   .tituloHome{
     font-size: 3em;
+  }
+  .tituloAbout{
+    font-size: 2em;
+    
+  }
+  .subtituloAbout{
+    font-size: 1em;
+    
+  }
+  .aboutContainer{
+    padding: 50px 20px;
+  }
+  .carrusellMovil{
+    display: block;
+  }
+  .imagenesAbout{
+    display: none;
   }
 }
 
 @media (max-width: 576px) {
   .tituloHome{
     font-size: 2.5em;
+  }
+  .tituloAbout{
+    font-size: 1.5em;
+    
+  }
+  .subtituloAbout{
+    font-size: 0.8em;
+    
+  }
+  .aboutContainer{
+    padding: 50px 20px;
   }
 }
 
