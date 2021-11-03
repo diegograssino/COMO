@@ -1,13 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Navbar, Container, Row, Col, Nav } from 'react-bootstrap';
 import { default as myLogo } from '../assets/oldlogo.svg';
-import logo from "../assets/img/Logo-COMO.png";
+import logo from '../assets/img/Logo-COMO.png';
 import CartWidget from './CartWidget';
 import CategoryWidget from './CategoryWidget';
 import { Link } from 'react-router-dom';
 import { firestore } from '../firebase';
-
-
 
 function MyNavbar() {
   const [categories, setCategories] = useState([]);
@@ -28,42 +26,41 @@ function MyNavbar() {
   }, []);
 
   return (
-
     <>
- 
-
-
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
         <Container>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav " className="me-auto">
-            <Nav className="me-auto d-flex  "  >
-             <Link to="/" className="text-decoration-none"> <Nav.Link>Inicio</Nav.Link></Link>
-              <Link to="/" className="text-decoration-none"><Nav.Link>Productos</Nav.Link></Link>
-              <Link to="#about" className="text-decoration-none"><Nav.Link>Nosotros</Nav.Link></Link>
-              <Link to="#contact" className="text-decoration-none"><Nav.Link>Contacto</Nav.Link></Link>
+            <Nav className="me-auto d-flex  ">
+              <Link to="/" className="text-decoration-none">
+                <Nav.Link>Inicio</Nav.Link>
+              </Link>
+              <Link to="/" className="text-decoration-none">
+                <Nav.Link>Productos</Nav.Link>
+              </Link>
+              <Link to="#about" className="text-decoration-none">
+                <Nav.Link>Nosotros</Nav.Link>
+              </Link>
+              <Link to="#contact" className="text-decoration-none">
+                <Nav.Link>Contacto</Nav.Link>
+              </Link>
             </Nav>
-          <Navbar.Brand className=" logo2 me-auto ">
-            <Link to="/">
-              
-              <img alt="Foodhouse" src={logo} width="100rem"  />
-            </Link>
-          </Navbar.Brand>
+            <Navbar.Brand className=" logo2 me-auto ">
+              <Link to="/">
+                <img alt="Foodhouse" src={logo} width="100rem" />
+              </Link>
+            </Navbar.Brand>
           </Navbar.Collapse>
-            <Navbar.Brand className=" logo1 ">
+          <Navbar.Brand className=" logo1 ">
             <Link to="/">
-              <img alt="Foodhouse" src={logo} width="70rem" height="25rem"  />
+              <img alt="Foodhouse" src={logo} width="70rem" height="25rem" />
             </Link>
           </Navbar.Brand>
           <CartWidget />
-
         </Container>
       </Navbar>
 
-
-
-
-      <Nav className="sticky-top vh-5">
+      {/* <Nav className="sticky-top vh-5">
         <Container className="bgPrimary" fluid>
           <Container className="text-white">
             <Row className="mt-1 mb-0">
@@ -86,7 +83,7 @@ function MyNavbar() {
             </Row>
           </Container>
         </Container>
-      </Nav>
+      </Nav> */}
     </>
   );
 }
