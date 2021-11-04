@@ -25,7 +25,16 @@
 }
 
 .fontTitle {
-  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  color: #828282;
+
+}
+.prod-info{
+  text-align: center;
+  font-size: 14px;
+  color: #828282;
 }
 
 .bgPrimary {
@@ -125,7 +134,10 @@
   border-color: teal;
   color: teal;
 }
-
+.card{
+  border-radius: 10px;
+  border: 1px solid #828282;
+}
 .card-img-wrap {
   overflow: hidden;
   position: relative;

@@ -58,16 +58,16 @@ const ItemCount = props => {
           <Col className="mt-2" xs={12} lg={4}>
             <Row className="m-0">
               <Button className="rounded-0" variant="primary" size="sm" onClick={() => props.onAdd(contador)}>
-                Add to the cart <FaCartPlus />
+                Agregar al Carrito <FaCartPlus />
               </Button>
             </Row>
           </Col>
           <Col xs={12} lg={4} className="mt-2">
-            <Link to="/">
+           {/*  <Link to="/">
               <Button className="w-100 rounded-0" variant="outline-success" size="sm">
                 Keep Buying
               </Button>
-            </Link>
+            </Link> */}
           </Col>
         </Row>
       </Container>
