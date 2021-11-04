@@ -1,28 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap');
 
 .reboot {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 16px;
   color: #697477;
   background-color: rgb(243, 243, 243);
   min-height: 100vh;
 }
-*{
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 /* nav */
-.logo1{
+.logo1 {
   display: none;
 }
-.logo2{
+.logo2 {
   display: block;
-}
-.fontLogo {
-  font-family: 'Oswald', sans-serif;
-  letter-spacing: -1px;
-  word-spacing: -1px;
 }
 
 .navBarFontSize {
@@ -38,55 +33,53 @@
 }
 /* home */
 
-.containerHome{
-  background-image: url("../assets/img/verdu.jpg");
+.containerHome {
+  background-image: url('../assets/img/verdu.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  
-
 }
-.tituloHome{
+.tituloHome {
   color: #ffffff;
   font-size: 4.5em;
   font-weight: 700;
 }
 
-.back{
+.back {
   background-color: #00000086;
-  
 }
 .carrito{
   color: #3216ad;
   background-color: transparent;
 }
 .btnHome{
+.btnHome {
   width: 200px !important;
- margin: auto;
+  margin: auto;
 }
 /* about */
-.carrusellMovil{
+.carrusellMovil {
   display: none;
 }
-.aboutContainer{
+.aboutContainer {
   padding: 50px 130px;
 }
-.tituloAbout{
+.tituloAbout {
   font-size: 2.5em;
   font-weight: 500;
 }
 .subtituloAbout{
   font-size: 1em;
+.subtituloAbout {
+  font-size: 1.2em;
   font-weight: 400;
 }
-.containerFoto{
+.containerFoto {
   width: 100%;
   min-height: 456px;
-display: block;
-object-fit: cover;
-
+  display: block;
+  object-fit: cover;
 }
-
 
 .spinner {
   width: 100vw;
@@ -189,56 +182,51 @@ object-fit: cover;
   .logo2 {
     display: none;
   }
-  .tituloHome{
+  .tituloHome {
     font-size: 3.5em;
-  
   }
-  .aboutContainer{
+  .aboutContainer {
     padding: 50px 20px;
   }
 }
 @media (max-width: 768px) {
-  .tituloHome{
+  .tituloHome {
     font-size: 3em;
   }
-  .tituloAbout{
+  .tituloAbout {
     font-size: 2em;
-    
   }
-  .subtituloAbout{
+  .subtituloAbout {
     font-size: 1em;
-    
   }
-  .aboutContainer{
+  .aboutContainer {
     padding: 50px 20px;
   }
-  .carrusellMovil{
+  .carrusellMovil {
     display: block;
   }
-  .imagenesAbout{
+  .imagenesAbout {
     display: none;
   }
 }
 
 @media (max-width: 576px) {
-  .tituloHome{
+  .tituloHome {
     font-size: 2.5em;
   }
-  .tituloAbout{
+  .tituloAbout {
     font-size: 1.5em;
-    
   }
-  .subtituloAbout{
+  .subtituloAbout {
     font-size: 0.8em;
-    
   }
-  .aboutContainer{
+  .aboutContainer {
     padding: 50px 20px;
   }
 }
 
 @media (max-width: 480px) {
-  .subTitle{
+  .subTitle {
     font-size: 0.8em;
   }
 }
