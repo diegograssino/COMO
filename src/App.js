@@ -14,7 +14,7 @@ function App() {
     <CartContext>
       <BrowserRouter>
         <MyNavbar />
-        
+       
         <Route path="/" component={Home} exact />
         <Route path="/" component={ItemListContainer} exact />
         <Route path="/category/:id" component={ItemListContainer} exact />

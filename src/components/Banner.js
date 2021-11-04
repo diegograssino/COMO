@@ -3,7 +3,7 @@ import  '../css/index.css'
 
 const Banner = () => {
     return (
-        <div className="container-fluid vh-100  containerHome">
+        <div className="container-fluid  containerHome">
             <div className="row back">
                 <div className="col w-100 vh-100 d-flex flex-column justify-content-center align-center">
                 <div>
