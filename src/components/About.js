@@ -16,10 +16,10 @@ const About = () => {
                     <Container className="imagenesAbout">
                         <Row>
                             <Col md={7}><Image className="containerFoto pb-3" src={imagen} /></Col>
-                            <Col xs={5}><Image className="containerFoto pb-0" src={imagen2} /></Col>
+                            <Col xs={5}><Image className="containerFoto h-100 pb-3" src={imagen2} /></Col>
                         </Row>
                         <Row>
-                            <Col md={5}><Image className="containerFoto" src={imagen3} /></Col>
+                            <Col md={5}><Image className="containerFoto h-100" src={imagen3} /></Col>
                             <Col md={7}><Image className="containerFoto" src={imagen4} /></Col>
                         </Row>
                     </Container>

@@ -48,6 +48,11 @@
 .back {
   background-color: #00000086;
 }
+.carrito{
+  color: #3216ad;
+  background-color: transparent;
+}
+.btnHome{
 .btnHome {
   width: 200px !important;
   margin: auto;
@@ -63,6 +68,8 @@
   font-size: 2.5em;
   font-weight: 500;
 }
+.subtituloAbout{
+  font-size: 1em;
 .subtituloAbout {
   font-size: 1.2em;
   font-weight: 400;
@@ -87,7 +94,11 @@
   align-items: center;
   background-color: lightgray;
 }
+/* horarios */
 
+.horas{
+  background-color: #C1989C;
+}
 .plus-minus-button:focus {
   outline: none;
   box-shadow: none;
