@@ -1,4 +1,4 @@
-import './css/bootstrap.min.css'; // Bootstrap CSS
+import './css/bootstrap2.min.css'; // Bootstrap CSS
 import './css/index.css';
 import MyNavbar from './components/Navbar';
 import ItemListContainer from './components/ItemListContainer';
@@ -14,7 +14,6 @@ function App() {
     <CartContext>
       <BrowserRouter>
         <MyNavbar />
-
         <Route path="/" component={Home} exact />
         <Route path="/" component={ItemListContainer} exact />
         <Route path="/category/:id" component={ItemListContainer} exact />
