@@ -1,28 +1,26 @@
-import { useState, useEffect } from 'react';
-import { Navbar, Container, Nav } from 'react-bootstrap';
-import logo from "../assets/img/logo-blanco.png";
 
+import { Navbar, Container, Nav } from 'react-bootstrap';
+import logo from '../assets/img/logo-blanco.png';
 import CartWidget from './CartWidget';
 import { Link } from 'react-router-dom';
-import { firestore } from '../firebase';
 
 function MyNavbar() {
-  const [categories, setCategories] = useState([]);
-  useEffect(() => {
-    firestore
-      .collection('categorys')
-      .get()
-      .then(resultados => {
-        const resultadoFinal = [];
-        resultados.forEach(resultado => {
-          const id = resultado.id;
-          const dataFinal = { id, ...resultado.data() };
-          resultadoFinal.push(dataFinal);
-          return resultadoFinal;
-        });
-        setCategories(resultadoFinal);
-      });
-  }, []);
+  // const [categories, setCategories] = useState([]);
+  // useEffect(() => {
+  //   firestore
+  //     .collection('categorys')
+  //     .get()
+  //     .then(resultados => {
+  //       const resultadoFinal = [];
+  //       resultados.forEach(resultado => {
+  //         const id = resultado.id;
+  //         const dataFinal = { id, ...resultado.data() };
+  //         resultadoFinal.push(dataFinal);
+  //         return resultadoFinal;
+  //       });
+  //       setCategories(resultadoFinal);
+  //     });
+  // }, []);
 
   return (
     <>
@@ -31,18 +29,18 @@ function MyNavbar() {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav " className="me-auto">
             <Nav className="me-auto d-flex  ">
-              <Link to="/" className="text-decoration-none">
-                <Nav.Link>Inicio</Nav.Link>
-              </Link>
-              <Link to="/" className="text-decoration-none">
-                <Nav.Link>Productos</Nav.Link>
-              </Link>
-              <Link to="#about" className="text-decoration-none">
-                <Nav.Link>Nosotros</Nav.Link>
-              </Link>
-              <Link to="#contact" className="text-decoration-none">
-                <Nav.Link>Contacto</Nav.Link>
-              </Link>
+              {/* <Link to="/" className="text-decoration-none"> */}
+              <Nav.Link>Inicio</Nav.Link>
+              {/* </Link> */}
+              {/* <Link to="/" className="text-decoration-none"> */}
+              <Nav.Link>Productos</Nav.Link>
+              {/* </Link> */}
+              {/* <Link to="#about" className="text-decoration-none"> */}
+              <Nav.Link>Nosotros</Nav.Link>
+              {/* </Link> */}
+              {/* <Link to="#contact" className="text-decoration-none"> */}
+              <Nav.Link>Contacto</Nav.Link>
+              {/* </Link> */}
             </Nav>
             <Navbar.Brand className=" logo2 me-auto ">
               <Link to="/">
