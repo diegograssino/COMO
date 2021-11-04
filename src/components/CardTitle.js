@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaStar } from 'react-icons/fa';
 import { Card } from 'react-bootstrap';
 
 const CardTitle = props => {

@@ -1,7 +1,6 @@
 import { Card, Row, Col, Button, Container } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import { NavLink } from 'react-router-dom';
-import ItemBadges from './ItemBadges';
 import ItemPrice from './ItemPrice';
 import CardTitle from './CardTitle';
 
