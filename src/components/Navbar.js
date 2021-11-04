@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Navbar, Container, Row, Col, Nav } from 'react-bootstrap';
 import { default as myLogo } from '../assets/oldlogo.svg';
-import logo from "../assets/img/logo-blanco.png";
-import logo from '../assets/img/Logo-COMO.png';
+import logo from '../assets/img/logo-blanco.png';
+// import logo from '../assets/img/Logo-COMO.png';
 import CartWidget from './CartWidget';
 import CategoryWidget from './CategoryWidget';
 import { Link } from 'react-router-dom';
