@@ -3,9 +3,27 @@ import { LinkContainer } from 'react-router-bootstrap';
 import { NavLink } from 'react-router-dom';
 import ItemPrice from './ItemPrice';
 import CardTitle from './CardTitle';
+import ItemCount from './ItemCount';
+import { useContext } from 'react';
+import Context from '../contexts/Context';
 
 function Item(props) {
+  let context = useContext(Context);
+  const onAdd = function onAdd(q) {
+    context.addItem(
+      props.producto.id,
+      q,
+      props.producto.title,
+      props.producto.price,
+      props.producto.description,
+      props.producto.image,
+      props.producto.category,
+      props.producto.discount
+    );
+  };
+
   return (
+
     <Card className="h-100 border-color-como border-radius-como">
       <Card.Body className="px-0 pb-1 pt-0">
         <Row>
@@ -20,6 +38,7 @@ function Item(props) {
             <LinkContainer to={`/item/${props.producto.id}`}>
               <CardTitle
                 producto={props.producto}
+
                 textClasses="text-center me-3 mb-1"
                 // starClasses="text-warning fs-5 me-1 mb-1"
               />
@@ -32,6 +51,7 @@ function Item(props) {
       </Card.Body>
       <Card.Footer className="fs-5 ps-4 pe-5 pt-0 mt-1 border-0">
         <Row className="mt-0">
+
           {/* <Col xs={4} className="ps-3 text-start">
             <LinkContainer to={`/item/${props.producto.id}`}>
               <Button variant="outline-secondary" size="sm" className="ms-1 p-1 border-0 rounded-0">
@@ -41,6 +61,7 @@ function Item(props) {
               </Button>
             </LinkContainer>
           </Col> */}
+
           <LinkContainer to={`/item/${props.producto.id}`}>
             <Button variant="secondary" className="border-radius-como button-color-como border-0">
               <span className="text-center">Agregar al carrito</span>
