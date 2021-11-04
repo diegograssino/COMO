@@ -1,5 +1,5 @@
-import React, { useEffect, useState,useParams } from 'react'
-import { Row, Col, Container, Image, Carousel } from 'react-bootstrap';
+import React from 'react'
+import { Row, Col, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import '../css/index.css'
 
@@ -19,8 +19,8 @@ const ListProduct = () => {
                     <Link to="/productos">Ver todos los productos</Link>
                 </Col>
             </Row>
-            <Row >
-                <Col md={12}>
+            <Row>
+                <Col md={12} >
                     <ItemListContainer />
                 </Col>
             </Row>
