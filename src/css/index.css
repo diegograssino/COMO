@@ -255,7 +255,7 @@
     font-size: 1.5em;
   }
   .subtituloAbout {
-    font-size: 0.8em;
+    font-size: 1em;
   }
   .aboutContainer {
     padding: 50px 20px;
@@ -264,6 +264,6 @@
 
 @media (max-width: 480px) {
   .subTitle {
-    font-size: 0.8em;
+    font-size: 1em;
   }
 }
