@@ -4,7 +4,7 @@
   font-family: 'Josefin Sans', sans-serif;
   font-size: 16px;
   color: #828282;
-  background-color: rgb(243, 243, 243);
+  background-color: rgb(228, 228, 228);
   min-height: 100vh;
 }
 * {
@@ -29,9 +29,8 @@
   font-family: 'Josefin Sans', sans-serif;
   text-align: center;
   color: #828282;
-
 }
-.prod-info{
+.prod-info {
   text-align: center;
   font-size: 14px;
   color: #828282;
@@ -134,7 +133,7 @@
   border-color: teal;
   color: teal;
 }
-.card{
+.card {
   border-radius: 10px;
   border: 1px solid #828282;
 }
@@ -172,8 +171,8 @@
   height: 100%;
 }
 /* form */
-.input{
-  width: 50%; 
+.input {
+  width: 50%;
   border-radius: 15px;
   resize: none;
 }
@@ -181,7 +180,7 @@
   display: inline-block;
   color: #ffffff;
   padding: 10px 50px;
-  background-color: #A5A2BD !important;
+  background-color: #a5a2bd !important;
 }
 .custom-footer {
   height: 10vh;
@@ -210,6 +209,10 @@
 .button-color-como {
   background-color: #a5a2bd;
   color: #ffffff;
+}
+
+.bg-color-card-como {
+  background-color: rgb(246, 246, 246);
 }
 
 @media (max-width: 992px) {

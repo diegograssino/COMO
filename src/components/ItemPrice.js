@@ -10,7 +10,7 @@ const ItemPrice = props => {
         </span>
       ) : null}
       <span className="fw-bold fs-5">
-        {Intl.NumberFormat('en-IN', { style: 'currency', currency: 'USS', minimumFractionDigits: 2 }).format(
+        {Intl.NumberFormat('es-AR', { style: 'currency', currency: 'ARS', minimumFractionDigits: 2 }).format(
           props.producto.price / (props.producto.discount + 1),
           0
         )}
