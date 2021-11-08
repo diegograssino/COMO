@@ -1,4 +1,4 @@
-import { Card, Row, Col, Button, Container } from 'react-bootstrap';
+import { Card, Row, Col, Container } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import { NavLink } from 'react-router-dom';
 import ItemPrice from './ItemPrice';

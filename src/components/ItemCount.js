@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Card, Row, Col, Button } from 'react-bootstrap';
-import { FaPlus, FaMinus, FaCartPlus } from 'react-icons/fa';
+import { FaPlus, FaMinus } from 'react-icons/fa';
 // import { Link } from 'react-router-dom';
 
 const ItemCount = props => {
