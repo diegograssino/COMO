@@ -16,6 +16,7 @@ const ListProduct = () => {
       </Row>
       <Row>
         <Col md={12}>
+        
           <FeaturedItemListContainer />
         </Col>
       </Row>

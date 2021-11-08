@@ -7,11 +7,14 @@ import imagen4 from '../assets/img/about4.jpg';
 import '../css/index.css';
 
 const About = () => {
+
+
+  
   return (
     <Container>
       <Row>
         <Col md={12} className=" text-center aboutContainer">
-          <h1 className="tituloAbout">Nosotros</h1>
+          <h1 className="tituloAbout" id="about">Nosotros</h1>
           <p className="subtituloAbout">
             Somos Ceci y Pachu. Amigos hace años. Un día nos unimos para crear este hermoso proyecto.
           </p>
@@ -34,7 +37,7 @@ const About = () => {
             </Row>
           </Container>
 
-          <Carousel className="carrusellMovil" controls={false} fade={true}>
+          <Carousel className="carrusellMovil" controls={true} fade={true}>
             <Carousel.Item>
               <img className="d-block w-100" src={imagen} alt="First slide" />
             </Carousel.Item>

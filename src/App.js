@@ -8,6 +8,8 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import CartContext from './contexts/CartContext';
 import Footer from './components/Footer';
 import Home from './components/Home';
+import About from './components/About';
+import Contact from './components/Contact';
 
 function App() {
   return (
@@ -15,9 +17,11 @@ function App() {
       <BrowserRouter>
         <MyNavbar />
         <Route path="/" component={Home} exact />
+        <Route path="/about" component={About} exact />
         <Route path="/productos/:id" component={ItemListContainer} exact />
         <Route path="/productos" component={ItemListContainer} exact />
         <Route path="/item/:id" component={ItemDetailContainer} exact />
+        <Route path="/contact" component={Contact} exact />
         <Route path="/cart" component={Cart} exact />
       </BrowserRouter>
       <Footer />

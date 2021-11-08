@@ -30,16 +30,16 @@ function MyNavbar() {
           <Navbar.Collapse id="responsive-navbar-nav " className="me-auto">
             <Nav className="me-auto d-flex  ">
               {/* <Link to="/" className="text-decoration-none"> */}
-              <Nav.Link>Inicio</Nav.Link>
+              <Nav.Link> <Link to="/" className="text-decoration-none link-secondary link">Inicio</Link></Nav.Link>
               {/* </Link> */}
               {/* <Link to="/" className="text-decoration-none"> */}
-              <Nav.Link>Productos</Nav.Link>
+              <Nav.Link><Link to="/productos" className="text-decoration-none link-secondary link">Productos</Link></Nav.Link>
               {/* </Link> */}
               {/* <Link to="#about" className="text-decoration-none"> */}
-              <Nav.Link>Nosotros</Nav.Link>
+              <Nav.Link><Link to="/about" className="text-decoration-none link-secondary link">Nosotros</Link></Nav.Link>
               {/* </Link> */}
               {/* <Link to="#contact" className="text-decoration-none"> */}
-              <Nav.Link>Contacto</Nav.Link>
+              <Nav.Link><Link to="contact" className="text-decoration-none link-secondary">Contacto</Link></Nav.Link>
               {/* </Link> */}
             </Nav>
             <Navbar.Brand className=" logo2 me-auto ">
@@ -53,7 +53,8 @@ function MyNavbar() {
               <img alt="Foodhouse" src={logo} width="70rem" height="25rem" />
             </Link>
           </Navbar.Brand>
-          <CartWidget />
+          <Link to="/cart" className="text-decoration-none link">
+          <CartWidget /></Link>
         </Container>
       </Navbar>
 
