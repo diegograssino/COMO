@@ -2,7 +2,7 @@ import { Row, Col, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import '../css/index.css';
 
-import ItemListContainer from './ItemListContainer';
+import FeaturedItemListContainer from './FeaturedItemListContainer';
 
 const ListProduct = () => {
   return (
@@ -16,7 +16,7 @@ const ListProduct = () => {
       </Row>
       <Row>
         <Col md={12}>
-          <ItemListContainer />
+          <FeaturedItemListContainer />
         </Col>
       </Row>
     </Container>

@@ -13,17 +13,7 @@ function ItemListContainer() {
   useEffect(() => {
     setLoading(true);
 
-    const filtro = listParams.id
-      ? firestore
-          .collection('items')
-          .where('category', '==', listParams.id)
-          .orderBy('featured', 'desc')
-          .orderBy('discount', 'desc')
-      : firestore
-          .collection('items')
-          .orderBy('featured', 'desc')
-          .orderBy('discount', 'desc')
-          .orderBy('category', 'asc');
+    const filtro = firestore.collection('items').where('featured', '==', true);
 
     filtro
 
