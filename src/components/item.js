@@ -3,24 +3,24 @@ import { LinkContainer } from 'react-router-bootstrap';
 import { NavLink } from 'react-router-dom';
 import ItemPrice from './ItemPrice';
 import CardTitle from './CardTitle';
-import ItemCount from './ItemCount';
-import { useContext } from 'react';
-import Context from '../contexts/Context';
+// import ItemCount from './ItemCount';
+// import { useContext } from 'react';
+// import Context from '../contexts/Context';
 
 function Item(props) {
-  let context = useContext(Context);
-  const onAdd = function onAdd(q) {
-    context.addItem(
-      props.producto.id,
-      q,
-      props.producto.title,
-      props.producto.price,
-      props.producto.description,
-      props.producto.image,
-      props.producto.category,
-      props.producto.discount
-    );
-  };
+  // let context = useContext(Context);
+  // const onAdd = function onAdd(q) {
+  //   context.addItem(
+  //     props.producto.id,
+  //     q,
+  //     props.producto.title,
+  //     props.producto.price,
+  //     props.producto.description,
+  //     props.producto.image,
+  //     props.producto.category,
+  //     props.producto.discount
+  //   );
+  // };
 
   return (
     <Card className="h-100 border-color-como border-radius-como bg-color-card-como">

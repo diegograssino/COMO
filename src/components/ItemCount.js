@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Card, Row, Col, Button } from 'react-bootstrap';
 import { FaPlus, FaMinus, FaCartPlus } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 const ItemCount = props => {
   const [contador, setContador] = useState(props.initial);
@@ -63,7 +63,7 @@ const ItemCount = props => {
             </Row>
           </Col>
           <Col xs={12} lg={4} className="mt-2">
-           {/*  <Link to="/">
+            {/*  <Link to="/">
               <Button className="w-100 rounded-0" variant="outline-success" size="sm">
                 Keep Buying
               </Button>
