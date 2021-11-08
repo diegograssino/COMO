@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import  '../css/index.css'
 
 const Banner = () => {
@@ -10,7 +11,7 @@ const Banner = () => {
 
                     <h1 className="d-block text-center my-auto tituloHome " >Bienvenidx</h1>
                     <p className="d-block text-center my-auto subTitle text-light"> Conocé nuestra cocina en el barrio de Almagro</p>
-                    <button className="btn btn-outline-light btnHome m-auto d-block">HACE TU PEDIDO</button>
+                    <Link to="contact" className="text-decoration-none link-secondary" ><button className="btn btn-outline-light btnHome m-auto d-block">HACE TU PEDIDO</button></Link>
                 </div>
                 </div>
             </div>
