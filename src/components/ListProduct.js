@@ -11,7 +11,7 @@ const ListProduct = () => {
         <Col md={12} className=" text-center aboutContainer">
           <h1 className="tituloAbout">Nuestros productos</h1>
           <p className="subtituloAbout">Ahora podes comprar nuestros productos a través de nuestra página</p>
-          <Link to="/productos/todos">Ver todos los productos</Link>
+          <Link to="/productos">Ver todos los productos</Link>
         </Col>
       </Row>
       <Row>
