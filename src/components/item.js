@@ -3,33 +3,33 @@ import { LinkContainer } from 'react-router-bootstrap';
 import { NavLink } from 'react-router-dom';
 import ItemPrice from './ItemPrice';
 import CardTitle from './CardTitle';
-// import ItemCount from './ItemCount';
-// import { useContext } from 'react';
-// import Context from '../contexts/Context';
+import ItemCount from './ItemCount';
+import { useContext } from 'react';
+import Context from '../contexts/Context';
 
 function Item(props) {
-  // let context = useContext(Context);
-  // const onAdd = function onAdd(q) {
-  //   context.addItem(
-  //     props.producto.id,
-  //     q,
-  //     props.producto.title,
-  //     props.producto.price,
-  //     props.producto.description,
-  //     props.producto.image,
-  //     props.producto.category,
-  //     props.producto.discount
-  //   );
-  // };
+  let context = useContext(Context);
+  const onAdd = function onAdd(q) {
+    context.addItem(
+      props.producto.id,
+      q,
+      props.producto.title,
+      props.producto.price,
+      props.producto.description,
+      props.producto.image,
+      props.producto.category,
+      props.producto.discount
+    );
+  };
 
   return (
     <Card className="h-100 border-color-como border-radius-como bg-color-card-como">
       <Card.Body className="px-0 pb-1 pt-0">
         <Row>
-          <Col md="12" className="px-md-5">
+          <Col md="12">
             <NavLink to={`/item/${props.producto.id}`}>
-              <div className="card-img-wrap border-radius-como">
-                <Card.Img src={props.producto.image} alt={props.producto.title} />
+              <div className="border-radius-como">
+                <Card.Img src={props.producto.image} alt={props.producto.title} className="border-radius-img-como" />
               </div>
             </NavLink>
           </Col>
@@ -47,7 +47,7 @@ function Item(props) {
           </Col>
         </Row>
       </Card.Body>
-      <Container className="text-center">
+      <Container className="text-center p-0">
         {/* <Col xs={4} className="ps-3 text-start">
             <LinkContainer to={`/item/${props.producto.id}`}>
               <Button variant="outline-secondary" size="sm" className="ms-1 p-1 border-0 rounded-0">
@@ -59,11 +59,12 @@ function Item(props) {
           </Col> */}
 
         <LinkContainer to={`/item/${props.producto.id}`}>
-          <Container className="d-grid gap-2">
-            <Button variant="secondary" className="border-radius-como button-color-como border-0">
+          {/* <Container className="d-grid gap-2 my-2 px-3 pb-2"> */}
+          <ItemCount initial={props.producto.stock > 0 ? 1 : 0} stock={props.producto.stock} onAdd={onAdd} />
+          {/* <Button variant="secondary" className="border-radius-como button-color-como border-0 py-3">
               <span className="text-center">Agregar al carrito</span>
             </Button>
-          </Container>
+          </Container> */}
         </LinkContainer>
       </Container>
     </Card>

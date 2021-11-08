@@ -202,8 +202,19 @@
   border-color: #828282;
 }
 
+.border-radius-img-como {
+  border-radius: 10px 10px 0px 0px;
+}
 .border-radius-como {
   border-radius: 10px;
+}
+
+.border-radius-button-right-como {
+  border-radius: 0px 10px 10px 0px;
+}
+
+.border-radius-button-left-como {
+  border-radius: 10px 0px 0px 10px;
 }
 
 .button-color-como {
@@ -213,6 +224,14 @@
 
 .bg-color-card-como {
   background-color: rgb(246, 246, 246);
+}
+
+.border-color-itemcount-como {
+  border-color: #a5a2bd;
+}
+
+.itemcount-bigger-font {
+  font-size: 1.5em;
 }
 
 @media (max-width: 992px) {
