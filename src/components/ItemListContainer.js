@@ -14,16 +14,14 @@ function ItemListContainer() {
     setLoading(true);
 
     const filtro = listParams.id
-      ? firestore
-          .collection('items')
-          .where('category', '==', listParams.id)
-          .orderBy('featured', 'desc')
-          .orderBy('discount', 'desc')
-      : firestore
-          .collection('items')
-          .orderBy('featured', 'desc')
-          .orderBy('discount', 'desc')
-          .orderBy('category', 'asc');
+      ? firestore.collection('items').orderBy('featured', 'desc').orderBy('discount', 'desc')
+      : // .where('category', '==', listParams.id)
+        firestore.collection('items').where('featured', '==', true);
+
+    // .collection('items')
+    // .orderBy('featured', 'desc')
+    // .orderBy('discount', 'desc')
+    // .orderBy('category', 'asc');
 
     filtro
 
