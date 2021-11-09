@@ -1,13 +1,18 @@
 import { Dropdown } from 'react-bootstrap';
-import { FaFilter } from 'react-icons/fa';
 import { LinkContainer } from 'react-router-bootstrap';
 
 const CategoryWidget = props => {
   return (
-    <Dropdown alignRight className="d-inline-block ms-1">
-      <Dropdown.Toggle className="text-light px-2 border-0" variant="outline-primary" size="md" id="dropdown-basic">
-        <span className="fw-bold fs-6">
-          <FaFilter />
+    <Dropdown alignRight className="d-inline-block">
+      <Dropdown.Toggle
+        className="px-2 border-0 border-1 border-color-itemcount-como button-color-como"
+        variant="secondary"
+        size="md"
+        id="dropdown-basic"
+      >
+        <span className="fs-6">
+          {/* <FaFilter /> */}
+          Filtro por categorias
         </span>
       </Dropdown.Toggle>
       <Dropdown.Menu>

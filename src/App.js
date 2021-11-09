@@ -20,7 +20,7 @@ function App() {
         <Route path="/about" component={About} exact />
         <Route path="/productos/:id" component={ItemListContainer} exact />
         <Route path="/productos" component={ItemListContainer} exact />
-        <Route path="/item/:id" component={ItemDetailContainer} exact />
+        <Route path="/category/:id" component={ItemListContainer} exact />
         <Route path="/contact" component={Contact} exact />
         <Route path="/cart" component={Cart} exact />
       </BrowserRouter>
