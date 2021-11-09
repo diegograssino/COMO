@@ -7,7 +7,7 @@ import ItemCount from './ItemCount';
 import { useContext } from 'react';
 import Context from '../contexts/Context';
 
-function              Item(props) {
+function Item(props) {
   let context = useContext(Context);
   const onAdd = function onAdd(q) {
     context.addItem(

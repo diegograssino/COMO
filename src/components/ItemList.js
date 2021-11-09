@@ -15,15 +15,14 @@ function ItemList(props) {
       </CardGroup>
 
       <Carousel className="carrusellMovil" controls={true} fade={true}>
-      {props.productos.map(producto => {
+        {props.productos.map(producto => {
           return (
-            <Carousel.Item key={producto.id} xs={12} md={6} lg={4} className="p-2">
+            <Carousel.Item key={producto.id} xs={12} md={6} lg={4} className="py-2">
               <Item producto={producto} />
             </Carousel.Item>
           );
         })}
-           
-          </Carousel>
+      </Carousel>
     </Container>
   );
 }
