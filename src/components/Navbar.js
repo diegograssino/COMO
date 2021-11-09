@@ -1,27 +1,9 @@
-
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import logo from '../assets/img/logo-blanco.png';
 import CartWidget from './CartWidget';
 import { Link } from 'react-router-dom';
 
 function MyNavbar() {
-  // const [categories, setCategories] = useState([]);
-  // useEffect(() => {
-  //   firestore
-  //     .collection('categorys')
-  //     .get()
-  //     .then(resultados => {
-  //       const resultadoFinal = [];
-  //       resultados.forEach(resultado => {
-  //         const id = resultado.id;
-  //         const dataFinal = { id, ...resultado.data() };
-  //         resultadoFinal.push(dataFinal);
-  //         return resultadoFinal;
-  //       });
-  //       setCategories(resultadoFinal);
-  //     });
-  // }, []);
-
   return (
     <>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
@@ -30,16 +12,24 @@ function MyNavbar() {
           <Navbar.Collapse id="responsive-navbar-nav " className="me-auto">
             <Nav className="me-auto d-flex  ">
               {/* <Link to="/" className="text-decoration-none"> */}
-              <Nav.Link> <Link to="/" className="text-decoration-none link-secondary link">Inicio</Link></Nav.Link>
+              <Link to="/" className="nav-link text-decoration-none link-secondary link">
+                Inicio
+              </Link>
               {/* </Link> */}
               {/* <Link to="/" className="text-decoration-none"> */}
-              <Nav.Link><Link to="/productos" className="text-decoration-none link-secondary link">Productos</Link></Nav.Link>
+              <Link to="/productos" className="nav-link text-decoration-none link-secondary link">
+                Productos
+              </Link>
               {/* </Link> */}
               {/* <Link to="#about" className="text-decoration-none"> */}
-              <Nav.Link><Link to="/about" className="text-decoration-none link-secondary link">Nosotros</Link></Nav.Link>
+              <Link to="/about" className="nav-link text-decoration-none link-secondary link">
+                Nosotros
+              </Link>
               {/* </Link> */}
               {/* <Link to="#contact" className="text-decoration-none"> */}
-              <Nav.Link><Link to="contact" className="text-decoration-none link-secondary">Contacto</Link></Nav.Link>
+              <Link to="contact" className="nav-link text-decoration-none link-secondary">
+                Contacto
+              </Link>
               {/* </Link> */}
             </Nav>
             <Navbar.Brand className=" logo2 me-auto ">
@@ -53,8 +43,9 @@ function MyNavbar() {
               <img alt="Foodhouse" src={logo} width="70rem" height="25rem" />
             </Link>
           </Navbar.Brand>
-          <Link to="/cart" className="text-decoration-none link">
-          <CartWidget /></Link>
+          {/* <Link to="/cart" className="text-decoration-none link"> */}
+          <CartWidget />
+          {/* </Link> */}
         </Container>
       </Navbar>
 

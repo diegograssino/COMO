@@ -3,7 +3,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 
 const CategoryWidget = props => {
   return (
-    <Dropdown alignRight className="d-inline-block">
+    <Dropdown className="d-inline-block">
       <Dropdown.Toggle
         className="px-2 border-0 border-1 border-color-itemcount-como button-color-como"
         variant="secondary"

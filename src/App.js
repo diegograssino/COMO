@@ -2,7 +2,6 @@ import './css/bootstrap2.min.css'; // Bootstrap CSS
 import './css/index.css';
 import MyNavbar from './components/Navbar';
 import ItemListContainer from './components/ItemListContainer';
-import ItemDetailContainer from './components/ItemDetailContainer';
 import Cart from './components/Cart';
 import { BrowserRouter, Route } from 'react-router-dom';
 import CartContext from './contexts/CartContext';
