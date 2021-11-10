@@ -20,23 +20,29 @@ const Cart = () => {
         <Row>
           <Col xs={12} className="p-0">
             <Card className="rounded-0 text-dark shadow p-2 mt-2 mx-2">
-              <Card.Text className="fw-bold pt-1 h3 text-center fontTitle">ORDER CONFIRMATION</Card.Text>
+              <Card.Text className=" pt-1 h3 text-center fontTitle"> Luego de confirmar la compra, el pedido de nuestras magias COMO podrá ser retirado <span className="fw-bold">el próximo sábado </span> con tu nombre.</Card.Text>
             </Card>
           </Col>
         </Row>
         <CardGroup className="my-2">
           <Row>
+          <Col xs={12} md={6} className="p-0">
+          <CartForm setShowOrder={setShowOrder} />
+          </Col>
+          <Col xs={12} md={6} className="pl-5">
             {context.items.map(item => {
               return (
-                <Col key={item.id} xs={12} md={6} lg={4} className="p-2">
+                <Col key={item.id} xs={12} md={12} lg={12} className="p-2">
                   <CartItem producto={item} />
                 </Col>
               );
             })}
+          </Col>
+         
           </Row>
         </CardGroup>
         <CartTotal />
-        <CartForm setShowOrder={setShowOrder} />
+        
       </Container>
     );
   } else if (!context.totalQ && showOrder) {
@@ -44,16 +50,16 @@ const Cart = () => {
       <Container className="text-center mt-5 min-vh-75">
         <h2 className="h1 fontTitle mb-4">{`YOUR ORDER: ${showOrder}`}</h2>
         <Link to="/">
-          <Button variant="success">Take me to buy!</Button>
+          <Button variant="success">Volver</Button>
         </Link>
       </Container>
     );
   } else {
     return (
       <Container className="text-center mt-5 min-vh-75">
-        <h2 className="h1 fontTitle mb-4">YOUR CART IS EMPTY</h2>
+        <h2 className="h1 fontTitle mb-4">Carrito Vacío</h2>
         <Link to="/">
-          <Button variant="success">Take me to buy!</Button>
+          <Button variant="success">Volver</Button>
         </Link>
       </Container>
     );

@@ -63,25 +63,29 @@ const CartForm = props => {
     <Row>
       <Col className="p-2" xs={12}>
         <Card className="rounded-0shadow">
-          <Card.Title className="fontTitle ps-3 py-1 fs-3 bg-primary text-white">YOUR DATA</Card.Title>
+          <Card.Title className="fontTitle ps-3 p-1 fs-3  ">Datos de contacto</Card.Title>
           <Card.Body>
             <Form.Group className="mb-3">
-              <Form.Label>Name</Form.Label>
-              <Form.Control type="text" placeholder="John Doe (6 characters minimum)" onChange={saveName} />
-              <Form.Text className="text-muted">We'll never share your email with anyone else.</Form.Text>
-            </Form.Group>
-            <Form.Group className="mb-3">
-              <Form.Label>Phone</Form.Label>
-              <Form.Control type="text" placeholder="1111111111 (10 characters exactly)" onChange={savePhone} />
+              <Form.Label>Nombre</Form.Label>
+              <Form.Control type="text" placeholder="Tu nombre" onChange={saveName} />
+
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label>Mail</Form.Label>
-              <Form.Control type="text" placeholder="your@mail.com (6 characters minimum)" onChange={saveEmail} />
+              <Form.Control type="text" placeholder="tucorreo@email.com " onChange={saveEmail} />
+            </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Label>Teléfono</Form.Label>
+              <Form.Control type="text" placeholder="1111111111 (10 carácteres)" onChange={savePhone} />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+              <Form.Label className="fontTitle ps-3 p-1 fs-3  ">Anotaciones</Form.Label>
+              <Form.Control as="textarea" rows={3} placeholder="Me gustaría ordenar un ..."/>
             </Form.Group>
             <Row>
               <Col xs={6}>
                 {error ? (
-                  <Form.Text className="fw-bold text-primary">Please, complete all the fields correctly.</Form.Text>
+                  <Form.Text className="fw-bold text-primary">Por favor, complete todos los campos</Form.Text>
                 ) : null}
               </Col>
               <Col xs={6} className="text-end">
@@ -92,7 +96,7 @@ const CartForm = props => {
                   onClick={() => handleBuy()}
                 >
                   <span className="ms-3 me-2 fw-bold fs-6">
-                    Buy buy buy!
+                    Comprar !
                     <FaArrowCircleRight className="ms-2" />
                   </span>
                 </Button>

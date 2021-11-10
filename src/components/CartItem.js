@@ -33,7 +33,7 @@ function Item(props) {
       </Card.Body>
       <Card.Footer className="fs-5 pt-0 border-0 rounded-0 bg-secondary">
         <Row className="mt-0 px-1">
-          <Col xs={6} className="text-start">
+          <Col xs={4} className="text-white">
             <span className="fs-6">
               <small>{`${props.producto.q} x ${Intl.NumberFormat('en-IN', {
                 style: 'currency',
@@ -42,25 +42,25 @@ function Item(props) {
               }).format(props.producto.price)}`}</small>
             </span>
           </Col>
-          <Col xs={6} className="text-end fs-6 fw-bold">
+          <Col xs={4} className="text-end fs-6 fw-bold text-white">
             {Intl.NumberFormat('en-IN', { style: 'currency', currency: 'USS', minimumFractionDigits: 2 }).format(
               props.producto.price * props.producto.q
             )}
+            
           </Col>
-        </Row>
-
-        <Row className="mx-1 my-2 pb-2 bg-cart-card-footer shadow px-2 pt-1">
-          <span className="fs-6 text-end px-0">
-            <Button
+          <Col  xs={4} className="text-end fs-6 fw-bold text-white">
+          <Button
               className="pb-1 pt-0 pe-1 ps-0 mt-1 me-0 border-0 rounded-pill"
               size="sm"
-              variant="outline-primary"
+              variant="outline-danger"
               onClick={() => context.removeItem(props.producto.id)}
             >
               <FaTrashAlt className="ms-1" />
             </Button>
-          </span>
+          </Col>
         </Row>
+
+       
       </Card.Footer>
     </Card>
   );
