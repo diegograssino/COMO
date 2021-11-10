@@ -10,10 +10,10 @@ const CartTotal = () => {
     <Row>
       <Col className="p-2" xs={12}>
         <Card className="rounded-0shadow">
-          <Card.Title className="fontTitle ps-3 py-1 fs-3 bg-primary text-white">TOTAL ORDER</Card.Title>
+          <Card.Title className="fontTitle ps-3 py-1 fs-3 bg-secondary text-white">TOTAL ORDEN</Card.Title>
           <Card.Body>
             <Card.Text className="fontTitle fs-4">{context.totalPrice}</Card.Text>
-            <Card.Text>{`${context.totalQ} units`}</Card.Text>
+            <Card.Text>{`${context.totalQ} unidades`}</Card.Text>
           </Card.Body>
           <Card.Footer className="fs-5 pt-0 border-0 rounded-0 bg-secondary">
             <Row className="mx-1 my-2 pb-2 bg-cart-card-footer shadow px-2 pt-1">
@@ -27,7 +27,7 @@ const CartTotal = () => {
                   >
                     <small>
                       <FaTrashAlt className="me-1" />
-                      Empty Cart
+                      Limpiar Carrito
                     </small>
                   </Button>
                 </span>
