@@ -37,7 +37,7 @@ function ItemList(props) {
         })}
       </CardGroup>
 
-      <Container className="mt-2 text-center">
+      <Container className="mt-2 text-center carrusellMovil">
         <CategoryWidget categories={categories} />
       </Container>
       <Carousel className="carrusellMovil" controls={true} fade={true} pause={'hover'}>

@@ -16,10 +16,11 @@ const ListProduct = () => {
         </Col>
       </Row>
       <Row className="position-relative">
-      <span className="position-absolute w-50  spanDiv" ></span>
+      <span className="position-absolute w-100  spanDiv" ></span>
         <Col md={12}>
         
           <FeaturedItemListContainer />
+         
         </Col>
       </Row>
     </Container>
