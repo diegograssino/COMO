@@ -20,12 +20,11 @@
   display: block;
 }
 
-
 .navBarFontSize {
   font-size: 1rem;
 }
-.link-secondary:hover{
-color: white !important;
+.link-secondary:hover {
+  color: white !important;
 }
 .fontTitle {
   font-size: 18px;
@@ -45,13 +44,10 @@ color: white !important;
 /* home */
 
 .containerHome {
- 
   background-image: url('../assets/img/verdu.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
- 
-  
 }
 .tituloHome {
   color: #ffffff;
@@ -71,6 +67,7 @@ color: white !important;
 .btnHome {
   width: 200px !important;
   margin: auto;
+  background-color: rgba(0, 0, 0, 0.56);
 }
 /* about */
 .carrusellMovil {
@@ -78,7 +75,6 @@ color: white !important;
 }
 .aboutContainer {
   padding: 50px 130px;
- 
 }
 .tituloAbout {
   font-size: 2.5em;
@@ -95,14 +91,14 @@ color: white !important;
   display: block;
   object-fit: cover;
 }
-.spanDiv{
+.spanDiv {
   z-index: 90;
   top: 0;
   left: 250px;
   height: 50px;
   background-color: rgb(228, 228, 228);
 }
-#dropdown-basic{
+#dropdown-basic {
   z-index: 000;
 }
 .spinner {
@@ -179,31 +175,25 @@ color: white !important;
   opacity: 1;
 }
 
-.badge-cart-widget {
-  background-color: grey;
-}
-
 .img-appear {
   width: 100%;
   height: 100%;
 }
 /* carrousell */
-.carousel-control-prev{
- top: 50;
+.carousel-control-prev {
+  top: 50;
   height: 50px;
   margin: auto;
   color: black !important;
-  ;
-background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
 }
-.carousel-control-next{
- top: 50;
+.carousel-control-next {
+  top: 50;
   height: 50px;
   margin: auto;
   color: black !important;
-  ;
-background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
 }
 /* form */
@@ -303,10 +293,8 @@ background-color: rgba(0, 0, 0, 0.2);
   .imagenesAbout {
     display: none;
   }
-  .spanDiv{
-   
-    left: 100px
-    
+  .spanDiv {
+    left: 100px;
   }
 }
 
@@ -326,33 +314,29 @@ background-color: rgba(0, 0, 0, 0.2);
   .input {
     width: 100%;
   }
-  .spanDiv{
-   
+  .spanDiv {
     left: 90px;
-    
   }
 }
 
 @media (max-width: 480px) {
-  .logo2{
-    display: none
+  .logo2 {
+    display: none;
   }
   .subTitle {
-
-    font-size: 1em;}
-    .spanDiv{
-      width: 400px;
-      
-       left: 80px;
-       
-     }
+    font-size: 1em;
   }
+  .spanDiv {
+    width: 400px;
+
+    left: 80px;
+  }
+}
 
 @media (max-width: 360px) {
-  .spanDiv{
-   width: 400px;
-   
+  .spanDiv {
+    width: 400px;
+
     left: 0px;
-    
   }
 }

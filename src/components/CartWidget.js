@@ -14,9 +14,7 @@ function CartWidget() {
           <div className="border border-0 btn btn-dark position-relative p-0">
             <MdOutlineShoppingCart className="text-light fs-5 " />
             {context.totalQ ? (
-              <span className="position-absolute top-25 start-75 badge rounded-pill badge-cart-widget p-1">
-                {context.totalQ}
-              </span>
+              <span className="position-absolute top-0 start-25 badge rounded-pill p-1">{context.totalQ}</span>
             ) : null}
           </div>
         </div>
