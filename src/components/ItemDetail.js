@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { Card, Row, Col, Container } from 'react-bootstrap';
 import ItemCount from './ItemCount';
 import Context from '../contexts/Context';
-import ItemBadges from './ItemBadges';
 import ItemPrice from './ItemPrice';
 import CardTitle from './CardTitle';
 import ItemInCart from './ItemInCart';
@@ -36,7 +35,7 @@ function ItemDetail(props) {
               />
             </Col>
             <Col xs={12} sm={12} md={5} lg={7} xl={8} className="px-0 py-2">
-              <Card className="h-100 my-0 py-0" className="border-0">
+              <Card className="h-100 my-0 py-0 border-0">
                 <Card.Body className="bg-color-como">
                   <CardTitle producto={props.producto} textClasses="fs-2" />
                   <Row className="mx-0 px-0 mt-3">

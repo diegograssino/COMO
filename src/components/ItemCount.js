@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { Container, Card, Row, Col, Button } from 'react-bootstrap';
+import { Card, Row, Col, Button } from 'react-bootstrap';
 import { FaPlus, FaMinus, FaWhatsapp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-// import { Link } from 'react-router-dom';
 
 const ItemCount = props => {
   const [contador, setContador] = useState(props.initial);
