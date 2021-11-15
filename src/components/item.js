@@ -35,11 +35,7 @@ function Item(props) {
           </Col>
           <Col md="12" className=" px-3 pt-3">
             <LinkContainer to={`/item/${props.producto.id}`}>
-              <CardTitle
-                producto={props.producto}
-                textClasses="text-center me-3 mb-1"
-                // starClasses="text-warning fs-5 me-1 mb-1"
-              />
+              <CardTitle producto={props.producto} textClasses="text-center me-3 mb-1" />
             </LinkContainer>
             {/* <ItemBadges producto={props.producto} /> */}
             <Container className="text-center fw-light py-2">Descripción corta o acortada por codigo</Container>

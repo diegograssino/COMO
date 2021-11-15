@@ -23,11 +23,10 @@ function ItemList(props) {
   }, []);
   return (
     <Container className="min-vh-85 position-relative ">
-      
       <CardGroup className="imagenesAbout">
-      <Container className="mt-2 text-center">
-        <CategoryWidget categories={categories} />
-      </Container>
+        <Container className="mt-2 text-center">
+          <CategoryWidget categories={categories} />
+        </Container>
         {props.productos.map(producto => {
           return (
             <Col key={producto.id} xs={12} md={6} lg={4} className="p-2 m-auto">
@@ -40,7 +39,7 @@ function ItemList(props) {
       <Container className="mt-2 text-center carrusellMovil">
         <CategoryWidget categories={categories} />
       </Container>
-      <Carousel className="carrusellMovil" controls={true} fade={true} pause={'hover'}>
+      <Carousel className="carrusellMovil" controls={true} slide={false} pause={'hover'}>
         {props.productos.map(producto => {
           return (
             <Carousel.Item key={producto.id} xs={12} md={6} lg={4} className="py-2 m-auto">
