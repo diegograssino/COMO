@@ -68,7 +68,14 @@
   width: 200px !important;
   margin: auto;
   background-color: rgba(0, 0, 0, 0.56);
+  transition: 0.4s;
 }
+
+.btnHome:hover {
+  background-color: #c1989c;
+  border-color: gray;
+}
+
 /* about */
 .carrusellMovil {
   display: none;
@@ -204,10 +211,9 @@
 }
 .btn-form {
   display: inline-block;
-  color: #ffffff;
   padding: 10px 50px;
-  background-color: #a5a2bd !important;
 }
+
 .custom-footer {
   height: 10vh;
 }
@@ -246,6 +252,13 @@
 .button-color-como {
   background-color: #a5a2bd;
   color: #ffffff;
+  transition: 0.4s;
+}
+
+.button-color-como:hover {
+  background-color: #c1989c;
+  border-color: #c1989c;
+  color: #ffffff;
 }
 
 .bg-color-card-como {
@@ -258,6 +271,15 @@
 
 .itemcount-bigger-font {
   font-size: 1.5em;
+}
+
+.link-color-como {
+  color: #c1989c;
+  transition: 0.3s;
+}
+
+.link-color-como:hover {
+  color: #a06268;
 }
 
 @media (max-width: 992px) {

@@ -9,7 +9,7 @@ const Banner = () => {
         <div className="col w-100  d-flex flex-column justify-content-center align-center">
           <div>
             <h1 className="d-block text-center my-auto tituloHome ">Bienvenidx</h1>
-            <p className="d-block text-center my-auto subTitle text-light mb-4º">
+            <p className="d-block text-center my-auto subTitle text-light mb-4">
               Conocé nuestra cocina en el barrio de Almagro
             </p>
             <Link to="/productos" className="text-decoration-none link-secondary">
