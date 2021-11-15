@@ -17,18 +17,18 @@ const Contact = () => {
             <Row>
                 <Col md={12} className=" text-center aboutContainer">
                     <h1 className="tituloAbout">Contacto</h1>
-                    <Form >
+                    <Form action="correo-contacto.php" method="post">
                         <Form.Group className="mb-3  " controlId="exampleForm.ControlInput1">
 
-                            <Form.Control className="input m-auto" type="text" placeholder="Nombre" />
+                            <Form.Control className="input m-auto" type="text" name="nombre" placeholder="Nombre" />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
 
-                            <Form.Control className="input m-auto" type="email" placeholder="Email" />
+                            <Form.Control className="input m-auto" type="email" name="correo" placeholder="Email" />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
 
-                            <Form.Control className="input m-auto" as="textarea" rows={3} placeholder="Consulta" />
+                            <Form.Control className="input m-auto" as="textarea" name="messaje" rows={3} placeholder="Consulta" />
                         </Form.Group>
                         <button className="btn bg-dark btn-form" type="submit">
                             Enviar

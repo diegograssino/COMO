@@ -20,6 +20,7 @@
   display: block;
 }
 
+
 .navBarFontSize {
   font-size: 1rem;
 }
@@ -333,13 +334,16 @@ background-color: rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 480px) {
+  .logo2{
+    display: none
+  }
   .subTitle {
 
     font-size: 1em;}
     .spanDiv{
       width: 400px;
       
-       left: 87px;
+       left: 80px;
        
      }
   }
@@ -348,7 +352,7 @@ background-color: rgba(0, 0, 0, 0.2);
   .spanDiv{
    width: 400px;
    
-    left: 87px;
+    left: 0px;
     
   }
 }
