@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Card, Row, Col, Button } from 'react-bootstrap';
-import { FaPlus, FaMinus } from 'react-icons/fa';
+import { FaPlus, FaMinus, FaWhatsapp } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 // import { Link } from 'react-router-dom';
 
 const ItemCount = props => {
@@ -25,42 +26,53 @@ const ItemCount = props => {
     }
   };
   return (
-    <Container className="mt-2 mb-4 py-0">
-      <Card className="border-bottom border-top border-start-0 border-end-0 border-color-itemcount-como mb-2 bg-color-card-como">
-        <Row>
-          <Col xs={4} className="text-start m-0">
-            <Button
-              className="p-3 border-1 border-color-itemcount-como plus-minus-button button-color-como border-radius-button-left-como"
-              onClick={() => setContador(restar(contador, 1))}
-            >
-              <FaMinus className="text-white" />
-            </Button>
-          </Col>
-          <Col xs={4} className="text-center fw-bold p-2 itemcount-bigger-font">
-            {contador}
-          </Col>
-          <Col xs={4} className="text-end m-0">
-            <Button
-              className="p-3 border-1 border-color-itemcount-como plus-minus-button button-color-como border-radius-button-right-como"
-              onClick={() => setContador(sumar(contador, 1))}
-            >
-              <FaPlus className="text-white" />
-            </Button>
-          </Col>
-        </Row>
-      </Card>
+    <Card className="border-0 bg-color-como">
       <Row>
-        <Container className="d-grid gap-2">
-          <Button
-            variant="secondary"
-            className="border-radius-como button-color-como border-0 py-3"
-            onClick={() => props.onAdd(contador)}
-          >
-            <span className="text-center">Agregar al carrito</span>
-          </Button>
-        </Container>
+        <Col xs={12} lg={4} className="mt-2">
+          <Card className="border-0">
+            <Row>
+              <Col xs={4} className="text-start">
+                <Button
+                  className="py-3 border-1 border-color-itemcount-como plus-minus-button button-color-como border-radius-button-left-como"
+                  onClick={() => setContador(restar(contador, 1))}
+                >
+                  <FaMinus className="text-white" />
+                </Button>
+              </Col>
+              <Col xs={4} className="text-center mt-2 itemcount-bigger-font">
+                {contador}
+              </Col>
+              <Col xs={4} className="text-end">
+                <Button
+                  className="py-3 border-1 border-color-itemcount-como plus-minus-button button-color-como border-radius-button-right-como"
+                  onClick={() => setContador(sumar(contador, 1))}
+                >
+                  <FaPlus className="text-white" />
+                </Button>
+              </Col>
+            </Row>
+          </Card>
+        </Col>
+        <Col className="mt-2" xs={12} lg={4}>
+          <Row className="m-0">
+            <Button
+              className="border-radius-como button-color-como border-0 py-3"
+              onClick={() => props.onAdd(contador)}
+            >
+              Add to the cart
+            </Button>
+          </Row>
+        </Col>
+        <Col xs={12} lg={4} className="mt-2">
+          <Link to="/">
+            <Button className="w-100 border-radius-como button-color-como border-0 py-3">
+              <FaWhatsapp className="me-1 fs-4 pb-1" />
+              Consultas?
+            </Button>
+          </Link>
+        </Col>
       </Row>
-    </Container>
+    </Card>
   );
 };
 
