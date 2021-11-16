@@ -16,22 +16,22 @@ const ItemInCart = props => {
           size="sm"
           onClick={() => context.removeItem(props.producto.id)}
         >
-          Remove
+          Eliminar
           <FaTrashAlt className="ms-1" />
         </Button>
       </Col>
       <Col xs={12} lg={4} className="mt-2">
         <Link to="/cart">
           <Button className="w-100 rounded-0" variant="success" size="sm">
-            To the cart!
+            Ir a carrito!
             <FaShoppingCart className="ms-1" />
           </Button>
         </Link>
       </Col>
       <Col xs={12} lg={4} className="mt-2">
-        <Link to="/">
+        <Link to="/productos">
           <Button className="w-100 rounded-0" variant="outline-success" size="sm">
-            Keep Buying
+            Seguir Comprando
           </Button>
         </Link>
       </Col>

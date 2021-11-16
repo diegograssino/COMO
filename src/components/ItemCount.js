@@ -58,12 +58,12 @@ const ItemCount = props => {
               className="border-radius-como button-color-como border-0 py-3"
               onClick={() => props.onAdd(contador)}
             >
-              Add to the cart
+              Agregar al Carrito
             </Button>
           </Row>
         </Col>
         <Col xs={12} lg={4} className="mt-2">
-          <Link to="/">
+          <Link   to="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
             <Button className="w-100 border-radius-como button-color-como border-0 py-3">
               <FaWhatsapp className="me-1 fs-4 pb-1" />
               Consultas?
