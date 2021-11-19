@@ -8,32 +8,11 @@ const CartTotal = () => {
 
   return (
     <Row>
-      <Col className="p-2" xs={12}>
-        <Card className="rounded-0shadow">
-          <Card.Title className="fontTitle ps-3 py-1 fs-3 bg-secondary text-white">TOTAL ORDEN</Card.Title>
-          <Card.Body>
-            <Card.Text className="fontTitle fs-4">{context.totalPrice}</Card.Text>
-            <Card.Text>{`${context.totalQ} unidades`}</Card.Text>
-          </Card.Body>
-          <Card.Footer className="fs-5 pt-0 border-0 rounded-0 bg-secondary">
-            <Row className="mx-1 my-2 pb-2 bg-cart-card-footer shadow px-2 pt-1">
-              <Col xs={12} className="text-end pe-0">
-                <span className="fs-6 text-end">
-                  <Button
-                    className="pb-1 pt-0 pe-1 ps-1 mt-1 me-0 rounded-0"
-                    size="sm"
-                    variant="outline-primary"
-                    onClick={() => context.clear()}
-                  >
-                    <small>
-                      <FaTrashAlt className="me-1" />
-                      Limpiar Carrito
-                    </small>
-                  </Button>
-                </span>
-              </Col>
-            </Row>
-          </Card.Footer>
+      <Col className="mt-2 py-0" xs={12}>
+        <Card className="border-0 bg-color-como">
+          <Card.Title className="fontTitle text-dark pe-3 py-1 fs-3 text-end">
+            {`Total: ${context.totalPrice}`}
+          </Card.Title>
         </Card>
       </Col>
     </Row>

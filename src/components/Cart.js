@@ -41,7 +41,8 @@ const Cart = () => {
             <Col xs={12} md={6} className="p-2">
               <CartForm setShowOrder={setShowOrder} />
             </Col>
-            <Col xs={12} md={6} className="pl-5">
+            <Col xs={12} md={6} className="mt-2">
+              <CartTotal />
               {context.items.map(item => {
                 return (
                   <Col
@@ -58,7 +59,6 @@ const Cart = () => {
             </Col>
           </Row>
         </CardGroup>
-        <CartTotal />
       </Container>
     );
   } else if (!context.totalQ && showOrder) {
