@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
-import { Col, Card, Button, Row } from 'react-bootstrap';
-import { FaTrashAlt } from 'react-icons/fa';
+import { Col, Card, Row } from 'react-bootstrap';
 import Context from '../contexts/Context';
 
 const CartTotal = () => {
