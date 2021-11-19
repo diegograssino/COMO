@@ -61,7 +61,7 @@ const ItemCount = props => {
               className="border-radius-como button-color-como border-0 py-3"
               onClick={() => props.onAdd(contador)}
             >
-              Add to the cart
+              Agregar al carrito
             </Button>
           </Row>
         </Col>

@@ -11,27 +11,23 @@ const ItemInCart = props => {
     <Row>
       <Col xs={12} lg={4} className="mt-2">
         <Button
-          className="w-100 rounded-0 button-custom"
-          variant="outline-secondary"
-          size="sm"
+          className="border-radius-como button-color-como border-0 py-3 w-100"
           onClick={() => context.removeItem(props.producto.id)}
         >
-          Remove
-          <FaTrashAlt className="ms-1" />
+          Eliminar del carrito
         </Button>
       </Col>
       <Col xs={12} lg={4} className="mt-2">
         <Link to="/cart">
-          <Button className="w-100 rounded-0" variant="success" size="sm">
-            To the cart!
-            <FaShoppingCart className="ms-1" />
+          <Button className="border-radius-como button-color-como border-0 py-3 w-100">
+            Finalizar compra
           </Button>
         </Link>
       </Col>
       <Col xs={12} lg={4} className="mt-2">
         <Link to="/">
-          <Button className="w-100 rounded-0" variant="outline-success" size="sm">
-            Keep Buying
+          <Button className="border-radius-como button-color-como border-0 py-3 w-100">
+            Seguir comprando
           </Button>
         </Link>
       </Col>
