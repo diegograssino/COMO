@@ -38,7 +38,10 @@ const ItemCount = props => {
                   <FaMinus className="text-white" />
                 </Button>
               </Col>
-              <Col xs={4} className="text-center mt-2 itemcount-bigger-font">
+              <Col
+                xs={4}
+                className="text-center mt-2 itemcount-bigger-font"
+              >
                 {contador}
               </Col>
               <Col xs={4} className="text-end">
@@ -64,7 +67,7 @@ const ItemCount = props => {
         </Col>
         <Col xs={12} lg={4} className="mt-2">
           <Link to="/">
-            <Button className="w-100 border-radius-como button-color-como border-0 py-3">
+            <Button className="w-100 border-radius-como button-color-wp border-0 py-3">
               <FaWhatsapp className="me-1 fs-4 pb-1" />
               Consultas?
             </Button>

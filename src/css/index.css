@@ -261,6 +261,17 @@
   color: #ffffff;
 }
 
+.button-color-wp {
+  background-color: #25d366;
+  color: #ffffff;
+  transition: 0.4s;
+}
+
+.button-color-wp:hover {
+  background-color: #128c7e;
+  color: #ffffff;
+}
+
 .bg-color-card-como {
   background-color: rgb(246, 246, 246);
 }
