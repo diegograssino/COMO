@@ -1,7 +1,7 @@
 import { Card, Row, Col, Button } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Link } from 'react-router-dom';
-import { FaTrashAlt } from 'react-icons/fa';
+import { CgTrashEmpty } from 'react-icons/cg';
 import React, { useContext } from 'react';
 import Context from '../contexts/Context';
 import CardTitle from './CardTitle';
@@ -10,57 +10,63 @@ function Item(props) {
   const context = useContext(Context);
 
   return (
-    <Card className="h-100 rounded-0 border-2 border-secondary shadow">
-      <Card.Body className="p-1">
+    <Card className="h-100 border-radius-como border-color-como bg-color-card-como">
+      <Card.Body className="ps-1 py-0">
         <Row>
-          <Col xs={4} className="px-2 pt-2 pb-0">
+          <Col xs={4} className="ps-2 py-0">
             <Link to={`/item/${props.producto.id}`}>
-              <div className="card-img-wrap p-2">
-                <Card.Img src={props.producto.image} alt={props.producto.title} />
-              </div>
+              <Card.Img
+                className="border-radius-button-left-como"
+                src={props.producto.image}
+                alt={props.producto.title}
+              />
             </Link>
           </Col>
           <Col className="px-0 pt-3">
             <LinkContainer to={`/item/${props.producto.id}`}>
               <CardTitle
                 producto={props.producto}
-                textClasses="fw-bold text-dark me-3 mb-1 fontTitle"
-                starClasses="text-warning fs-5 me-1 mb-1"
+                textClasses="fw-bold text-start me-3 mb-1 fontTitle"
               />
             </LinkContainer>
           </Col>
         </Row>
       </Card.Body>
-      <Card.Footer className="fs-5 pt-0 border-0 rounded-0 bg-secondary">
+      <Card.Footer className="fs-5 pt-0 border-0">
         <Row className="mt-0 px-1">
-          <Col xs={4} className="text-white">
+          <Col xs={8} className="mt-2">
             <span className="fs-6">
-              <small>{`${props.producto.q} x ${Intl.NumberFormat('en-IN', {
+              {`${props.producto.q} x ${Intl.NumberFormat('es-AR', {
                 style: 'currency',
-                currency: 'USS',
+                currency: 'ARS',
                 minimumFractionDigits: 2,
-              }).format(props.producto.price)}`}</small>
+              }).format(
+                props.producto.price
+              )} - SUBTOTAL ${Intl.NumberFormat('es-AR', {
+                style: 'currency',
+                currency: 'ARS',
+                minimumFractionDigits: 2,
+              }).format(props.producto.price * props.producto.q)}`}
             </span>
           </Col>
+          {/* <Col xs={4} className="text-center mt-1 fs-6 fw-bold">
+            {Intl.NumberFormat('es-AR', {
+              style: 'currency',
+              currency: 'ARS',
+              minimumFractionDigits: 2,
+            }).format(props.producto.price * props.producto.q)}
+          </Col> */}
           <Col xs={4} className="text-end fs-6 fw-bold text-white">
-            {Intl.NumberFormat('en-IN', { style: 'currency', currency: 'USS', minimumFractionDigits: 2 }).format(
-              props.producto.price * props.producto.q
-            )}
-            
-          </Col>
-          <Col  xs={4} className="text-end fs-6 fw-bold text-white">
-          <Button
+            <Button
               className="pb-1 pt-0 pe-1 ps-0 mt-1 me-0 border-0 rounded-pill"
-              size="sm"
-              variant="outline-danger"
+              size="lg"
+              variant="outline-dark"
               onClick={() => context.removeItem(props.producto.id)}
             >
-              <FaTrashAlt className="ms-1" />
+              <CgTrashEmpty className="ms-1" />
             </Button>
           </Col>
         </Row>
-
-       
       </Card.Footer>
     </Card>
   );

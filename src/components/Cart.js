@@ -26,11 +26,11 @@ const Cart = () => {
       <Container className="mt-2 min-vh-85">
         <Row>
           <Col xs={12} className="p-0">
-            <Card className="border-radius-como border-color-como text-dark shadow p-2 mt-2 mx-2">
+            <Card className="border-radius-como border-color-como p-2 mt-2 mx-3">
               <Card.Text className="pt-1 h3 text-center fontTitle">
                 Luego de confirmar la compra, el pedido de nuestras
-                magias COMO podrá ser retirado{' '}
-                <span className="fw-bold">el próximo sábado </span>
+                magias COMO podrá ser retirado
+                <span className="fw-bold"> el próximo sábado </span>
                 con tu nombre.
               </Card.Text>
             </Card>
@@ -49,7 +49,7 @@ const Cart = () => {
                     xs={12}
                     md={12}
                     lg={12}
-                    className="p-2"
+                    className="p-2 mt-2"
                   >
                     <CartItem producto={item} />
                   </Col>
