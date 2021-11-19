@@ -62,41 +62,67 @@ const CartForm = props => {
   return (
     <Row>
       <Col className="p-2" xs={12}>
-        <Card className="rounded-0shadow">
-          <Card.Title className="fontTitle ps-3 p-1 fs-3  ">Datos de contacto</Card.Title>
+        <Card className="border-0 bg-color-como">
+          <Card.Title className="fontTitle ps-3 mt-2 fs-3 text-start">
+            Datos de contacto
+          </Card.Title>
           <Card.Body>
             <Form.Group className="mb-3">
-              <Form.Label>Nombre</Form.Label>
-              <Form.Control type="text" placeholder="Tu nombre" onChange={saveName} />
-
+              {/* <Form.Label>Nombre</Form.Label> */}
+              <Form.Control
+                className="border-radius-como border-color-como"
+                type="text"
+                placeholder="Tu nombre"
+                onChange={saveName}
+              />
             </Form.Group>
             <Form.Group className="mb-3">
-              <Form.Label>Mail</Form.Label>
-              <Form.Control type="text" placeholder="tucorreo@email.com " onChange={saveEmail} />
+              {/* <Form.Label>Mail</Form.Label> */}
+              <Form.Control
+                className="border-radius-como border-color-como"
+                type="text"
+                placeholder="tucorreo@email.com "
+                onChange={saveEmail}
+              />
             </Form.Group>
             <Form.Group className="mb-3">
-              <Form.Label>Teléfono</Form.Label>
-              <Form.Control type="text" placeholder="1111111111 (10 carácteres)" onChange={savePhone} />
+              {/* <Form.Label>Teléfono</Form.Label> */}
+              <Form.Control
+                className="border-radius-como border-color-como"
+                type="text"
+                placeholder="Tú telefono (1112345678)"
+                onChange={savePhone}
+              />
             </Form.Group>
-            <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-              <Form.Label className="fontTitle ps-3 p-1 fs-3  ">Anotaciones</Form.Label>
-              <Form.Control as="textarea" rows={3} placeholder="Me gustaría ordenar un ..."/>
+            <Form.Group
+              className="mb-3"
+              controlId="exampleForm.ControlTextarea1"
+            >
+              <Form.Label className="fontTitle mt-2 mb-3 p-1 fs-3  ">
+                Anotaciones
+              </Form.Label>
+              <Form.Control
+                className="border-radius-como border-color-como"
+                as="textarea"
+                rows={3}
+                placeholder="Me gustaría ordenar un ..."
+              />
             </Form.Group>
             <Row>
               <Col xs={6}>
                 {error ? (
-                  <Form.Text className="fw-bold text-primary">Por favor, complete todos los campos</Form.Text>
+                  <Form.Text className="fw-bold text-primary">
+                    Por favor, complete todos los campos
+                  </Form.Text>
                 ) : null}
               </Col>
               <Col xs={6} className="text-end">
                 <Button
-                  className="pb-1 pt-0 pe-1 ps-0 mt-1 me-0 rounded-pill"
-                  size="lg"
-                  variant="success"
+                  className="py-2 pe-2 ps-1 mt-1 me-0 border-radius-como button-color-como border-0"
                   onClick={() => handleBuy()}
                 >
                   <span className="ms-3 me-2 fw-bold fs-6">
-                    Comprar !
+                    Ir a pagar
                     <FaArrowCircleRight className="ms-2" />
                   </span>
                 </Button>

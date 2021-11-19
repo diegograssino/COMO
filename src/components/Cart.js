@@ -1,5 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Container, Col, Card, CardGroup, Button, Row } from 'react-bootstrap';
+import {
+  Container,
+  Col,
+  Card,
+  CardGroup,
+  Button,
+  Row,
+} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Context from '../contexts/Context';
 import CartItem from './CartItem';
@@ -19,30 +26,39 @@ const Cart = () => {
       <Container className="mt-2 min-vh-85">
         <Row>
           <Col xs={12} className="p-0">
-            <Card className="rounded-0 text-dark shadow p-2 mt-2 mx-2">
-              <Card.Text className=" pt-1 h3 text-center fontTitle"> Luego de confirmar la compra, el pedido de nuestras magias COMO podrá ser retirado <span className="fw-bold">el próximo sábado </span> con tu nombre.</Card.Text>
+            <Card className="border-radius-como border-color-como text-dark shadow p-2 mt-2 mx-2">
+              <Card.Text className="pt-1 h3 text-center fontTitle">
+                Luego de confirmar la compra, el pedido de nuestras
+                magias COMO podrá ser retirado{' '}
+                <span className="fw-bold">el próximo sábado </span>
+                con tu nombre.
+              </Card.Text>
             </Card>
           </Col>
         </Row>
         <CardGroup className="my-2">
           <Row>
-          <Col xs={12} md={6} className="p-0">
-          <CartForm setShowOrder={setShowOrder} />
-          </Col>
-          <Col xs={12} md={6} className="pl-5">
-            {context.items.map(item => {
-              return (
-                <Col key={item.id} xs={12} md={12} lg={12} className="p-2">
-                  <CartItem producto={item} />
-                </Col>
-              );
-            })}
-          </Col>
-         
+            <Col xs={12} md={6} className="p-2">
+              <CartForm setShowOrder={setShowOrder} />
+            </Col>
+            <Col xs={12} md={6} className="pl-5">
+              {context.items.map(item => {
+                return (
+                  <Col
+                    key={item.id}
+                    xs={12}
+                    md={12}
+                    lg={12}
+                    className="p-2"
+                  >
+                    <CartItem producto={item} />
+                  </Col>
+                );
+              })}
+            </Col>
           </Row>
         </CardGroup>
         <CartTotal />
-        
       </Container>
     );
   } else if (!context.totalQ && showOrder) {
