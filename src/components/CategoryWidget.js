@@ -10,10 +10,7 @@ const CategoryWidget = props => {
         size="md"
         id="dropdown-basic"
       >
-        <span className="fs-6">
-          {/* <FaFilter /> */}
-          Filtro por categorias
-        </span>
+        <span className="fs-6">Filtro por categorias</span>
       </Dropdown.Toggle>
       <Dropdown.Menu>
         <Dropdown.Item key={0} className="text-uppercase">
@@ -23,7 +20,10 @@ const CategoryWidget = props => {
         </Dropdown.Item>
         {props.categories.map(category => {
           return (
-            <Dropdown.Item key={category.id} className="text-uppercase">
+            <Dropdown.Item
+              key={category.id}
+              className="text-uppercase"
+            >
               <LinkContainer to={`/category/${category.title}`}>
                 <div>{category.title}</div>
               </LinkContainer>
