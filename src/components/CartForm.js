@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Button, Card, Col, Row } from 'react-bootstrap';
+import { Card, Col, Row } from 'react-bootstrap';
 import Context from '../contexts/Context';
 // import { firestore } from '../firebase';
 // import MyLoader from './MyLoader';
