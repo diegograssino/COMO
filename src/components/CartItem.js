@@ -49,19 +49,12 @@ function Item(props) {
               }).format(props.producto.price * props.producto.q)}`}
             </span>
           </Col>
-          {/* <Col xs={4} className="text-center mt-1 fs-6 fw-bold">
-            {Intl.NumberFormat('es-AR', {
-              style: 'currency',
-              currency: 'ARS',
-              minimumFractionDigits: 2,
-            }).format(props.producto.price * props.producto.q)}
-          </Col> */}
           <Col xs={4} className="text-end fs-6 fw-bold text-white">
             <Button
               className="pb-1 pt-0 pe-1 ps-0 mt-1 me-0 border-0 rounded-pill"
               size="lg"
               variant="outline-dark"
-              onClick={() => context.removeItem(props.producto.id)}
+              onClick={() => context.removeItem(props.producto.title)}
             >
               <CgTrashEmpty className="ms-1" />
             </Button>
