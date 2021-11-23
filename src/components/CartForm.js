@@ -122,7 +122,7 @@ const CartForm = props => {
             Comprar ahora!
           </Button> */}
           <form
-            action="http://node-mp-como.herokuapp.com/checkout"
+            action="https://node-mp-como.herokuapp.com/checkout"
             method="POST"
           >
             <input
