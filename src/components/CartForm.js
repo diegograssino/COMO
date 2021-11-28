@@ -1,5 +1,5 @@
-import React, { useContext, useState } from 'react';
-import { Card, Col, Row, Form } from 'react-bootstrap';
+import React, { useContext } from 'react';
+import { Card, Col, Row } from 'react-bootstrap';
 import Context from '../contexts/Context';
 // import { firestore } from '../firebase';
 // import MyLoader from './MyLoader';
@@ -7,22 +7,22 @@ import Context from '../contexts/Context';
 
 const CartForm = props => {
   let context = useContext(Context);
-  const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
+  // const [name, setName] = useState('');
+  // const [phone, setPhone] = useState('');
   // const [email, setEmail] = useState('');
   // const [error, setError] = useState(false);
   // const [loading, setLoading] = useState();
 
-  const saveName = e => {
-    const input = e.target;
-    const valor = input.value;
-    setName(valor);
-  };
-  const savePhone = e => {
-    const input = e.target;
-    const valor = input.value;
-    setPhone(valor);
-  };
+  // const saveName = e => {
+  //   const input = e.target;
+  //   const valor = input.value;
+  //   setName(valor);
+  // };
+  // const savePhone = e => {
+  //   const input = e.target;
+  //   const valor = input.value;
+  //   setPhone(valor);
+  // };
   // const saveEmail = e => {
   //   const input = e.target;
   //   const valor = input.value;
@@ -122,14 +122,14 @@ const CartForm = props => {
             Datos de contacto
           </Card.Title>
           <Card.Body>
-            <Form.Group className="mb-3">
+            {/* <Form.Group className="mb-3">
               <Form.Control
                 className="border-radius-como border-color-como"
                 type="text"
                 placeholder="Tu nombre"
                 onChange={saveName}
               />
-            </Form.Group>
+            </Form.Group> */}
             {/* <Form.Group className="mb-3">
               <Form.Control
                 className="border-radius-como border-color-como"
@@ -138,14 +138,14 @@ const CartForm = props => {
                 onChange={saveEmail}
               />
             </Form.Group> */}
-            <Form.Group className="mb-3">
+            {/* <Form.Group className="mb-3">
               <Form.Control
                 className="border-radius-como border-color-como"
                 type="text"
                 placeholder="Tú telefono (1112345678)"
                 onChange={savePhone}
               />
-            </Form.Group>
+            </Form.Group> */}
             {/* <Form.Group
               className="mb-3"
               controlId="exampleForm.ControlTextarea1"
@@ -161,45 +161,82 @@ const CartForm = props => {
               /> */}
             {/* </Form.Group> */}
             <Row>
-              <Col xs={6}>
-                {/* {error ? (
+              {/* <Col xs={6}> */}
+              {/* {error ? (
                   <Form.Text className="fw-bold text-primary">
                     Por favor, complete todos los campos
                   </Form.Text>
                 ) : null} */}
-              </Col>
-              <Col xs={6} className="text-end">
-                <form
-                  action="https://node-mp-como.herokuapp.com/checkout"
-                  // action="http://localhost:3000/checkout"
-                  method="POST"
-                >
-                  <input
-                    type="hidden"
-                    name="cartItems"
-                    value={context.mpItems}
-                  />
-                  <input
-                    type="hidden"
-                    name="title"
-                    value="Productos varios COMO"
-                  />
-                  <input
-                    type="hidden"
-                    name="unit_price"
-                    value={context.totalPrice2}
-                  />
-                  <input type="hidden" name="name" value={name} />
-                  {/* <input type="hidden" name="email" value={email} /> */}
-                  <input type="hidden" name="number" value={phone} />
+              {/* </Col> */}
+              {/* <Col xs={6} className="text-end"> */}
+              <form
+                action="https://node-mp-como.herokuapp.com/checkout"
+                // action="http://localhost:3000/checkout"
+                method="POST"
+              >
+                <input
+                  type="hidden"
+                  name="cartItems"
+                  value={context.mpItems}
+                />
+                <input
+                  type="hidden"
+                  name="title"
+                  value="Productos varios COMO"
+                />
+                <input
+                  type="hidden"
+                  name="unit_price"
+                  value={context.totalPrice2}
+                />
+                <label for="inputName" class="form-label">
+                  Nombre
+                </label>
+                <input
+                  className="form-control border-radius-como border-color-como border-1 mb-3"
+                  id="inputName"
+                  name="name"
+                  required
+                  type="text"
+                  placeholder="Juanx Pérez"
+                  // value={name}
+                />
+                {/* <input type="hidden" name="email" value={email} /> */}
+                {/* <input type="hidden" name="number" /> */}
+                <label for="inputPhone" class="form-label">
+                  Teléfono
+                </label>
+                <input
+                  className="form-control border-radius-como border-color-como border-1 mb-3"
+                  id="inputPhone"
+                  name="number"
+                  required
+                  type="number"
+                  placeholder="Solo números (ejemplo 1123456789)"
 
-                  <input
-                    value="Comprar ahora"
-                    className="py-2 px-3 mt-1 me-0 border-radius-como button-color-como border-0"
-                    type="submit"
-                  />
-                </form>
-                {/* <Button
+                  // value={name}
+                />
+                {/* <input type="hidden" name="number" /> */}
+                <label for="inputEmail" class="form-label">
+                  Email
+                </label>
+                <input
+                  className="form-control border-radius-como border-color-como border-1 mb-3"
+                  id="inputEmail"
+                  name="email"
+                  type="email"
+                  required
+                  placeholder="juanx@perez.com"
+                  // value={name}
+                />
+
+                <input
+                  value="Comprar ahora"
+                  className="py-2 px-3 mt-1 me-0 border-radius-como button-color-como border-0"
+                  type="submit"
+                />
+              </form>
+              {/* <Button
                   className="py-2 pe-2 ps-1 mt-1 me-0 border-radius-como button-color-como border-0"
                   onClick={() => handleBuy()}
                 >
@@ -207,8 +244,8 @@ const CartForm = props => {
                     Ir a pagar
                   </span>
                 </Button> */}
-                {/* {loading ? <MyLoader /> : null} */}
-              </Col>
+              {/* {loading ? <MyLoader /> : null} */}
+              {/* </Col> */}
             </Row>
           </Card.Body>
         </Card>
