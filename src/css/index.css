@@ -49,6 +49,12 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+.containerHome2 {
+  background-image: url('../assets/img/fondo-feedback.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
 .tituloHome {
   color: #ffffff;
   font-size: 4.5em;

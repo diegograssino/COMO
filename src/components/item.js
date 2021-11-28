@@ -21,7 +21,7 @@ function Item(props) {
               <CardTitle producto={props.producto} textClasses="text-center me-3 mb-1" />
             </LinkContainer>
             {/* <ItemBadges producto={props.producto} /> */}
-            <Container className="text-center fw-light py-2">Descripción corta o acortada por codigo</Container>
+            <Container className="text-center fw-light py-2">{props.producto.minidescription}</Container>
             <ItemPrice producto={props.producto} col1Classes="text-center" />
           </Col>
         </Row>
