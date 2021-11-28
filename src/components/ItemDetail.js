@@ -34,14 +34,30 @@ function ItemDetail(props) {
                 className="border-radius-como border-color-como border border-2"
               />
             </Col>
-            <Col xs={12} sm={12} md={5} lg={7} xl={8} className="px-0 py-2">
+            <Col
+              xs={12}
+              sm={12}
+              md={5}
+              lg={7}
+              xl={8}
+              className="px-0 py-2"
+            >
               <Card className="h-100 my-0 py-0 border-0">
                 <Card.Body className="bg-color-como">
-                  <CardTitle producto={props.producto} textClasses="fs-2" />
+                  <CardTitle
+                    producto={props.producto}
+                    textClasses="fs-2"
+                  />
                   <Row className="mx-0 px-0 mt-3">
-                    <ItemPrice producto={props.producto} colGrid={12} col1Classes="ps-0" />
+                    <ItemPrice
+                      producto={props.producto}
+                      colGrid={12}
+                      col1Classes="ps-0"
+                    />
                   </Row>
-                  <Card.Text className="mx-0 my-3">{props.producto.description}</Card.Text>
+                  <Card.Text className="mx-0 my-3">
+                    {props.producto.description}
+                  </Card.Text>
                 </Card.Body>
                 <Card.Footer className="border-0 bg-color-como">
                   {context.isInCart(props.producto.id) ? (
@@ -49,7 +65,7 @@ function ItemDetail(props) {
                   ) : (
                     <Row>
                       <ItemCount
-                        initial={props.producto.stock > 0 ? 1 : 0}
+                        initial={1}
                         stock={props.producto.stock}
                         onAdd={onAdd}
                       />

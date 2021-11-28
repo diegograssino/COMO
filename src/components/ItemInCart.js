@@ -11,7 +11,7 @@ const ItemInCart = props => {
       <Col xs={12} lg={4} className="mt-2">
         <Button
           className="border-radius-como button-color-como border-0 py-3 w-100"
-          onClick={() => context.removeItem(props.producto.id)}
+          onClick={() => context.removeItem(props.producto.title)}
         >
           Eliminar del carrito
         </Button>

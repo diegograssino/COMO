@@ -2,12 +2,14 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyBJZg3zoMZ9vbH8Tum5ddJ5vYPGawRdwFs',
-  authDomain: 'coderhouse-14680.firebaseapp.com',
-  projectId: 'coderhouse-14680',
-  storageBucket: 'coderhouse-14680.appspot.com',
-  messagingSenderId: '321451485047',
-  appId: '1:321451485047:web:715a7597bb22d464f0e372',
+  apiKey: 'AIzaSyBefee2wTUPncNwkYiqG18lPZoc56_sU0A',
+  authDomain: 'como-40467.firebaseapp.com',
+  databaseURL: 'https://como-40467-default-rtdb.firebaseio.com',
+  projectId: 'como-40467',
+  storageBucket: 'como-40467.appspot.com',
+  messagingSenderId: '437713637110',
+  appId: '1:437713637110:web:97d1e8537178b840fb66d7',
+  measurementId: 'G-0NY7S1791Y',
 };
 
 const app = firebase.initializeApp(firebaseConfig);

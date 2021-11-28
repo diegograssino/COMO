@@ -18,11 +18,9 @@ function ItemListContainer() {
           .collection('items')
           .where('category', '==', listParams.id)
           .orderBy('featured', 'desc')
-          .orderBy('discount', 'desc')
       : firestore
           .collection('items')
           .orderBy('featured', 'desc')
-          .orderBy('discount', 'desc')
           .orderBy('category', 'asc');
 
     filtro
@@ -41,7 +39,9 @@ function ItemListContainer() {
       .finally(() => setLoading(false));
   }, [listParams.id]);
 
-  return <>{loading ? <MyLoader /> : <ItemList productos={productos} />}</>;
+  return (
+    <>{loading ? <MyLoader /> : <ItemList productos={productos} />}</>
+  );
 }
 
 export default ItemListContainer;
