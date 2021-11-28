@@ -170,8 +170,8 @@ const CartForm = props => {
               </Col>
               <Col xs={6} className="text-end">
                 <form
-                  // action="https://node-mp-como.herokuapp.com/checkout"
-                  action="http://localhost:3000/checkout"
+                  action="https://node-mp-como.herokuapp.com/checkout"
+                  // action="http://localhost:3000/checkout"
                   method="POST"
                 >
                   <input
