@@ -9,7 +9,7 @@ const CartForm = props => {
   let context = useContext(Context);
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
-  const [email, setEmail] = useState('');
+  // const [email, setEmail] = useState('');
   // const [error, setError] = useState(false);
   // const [loading, setLoading] = useState();
 
@@ -23,11 +23,11 @@ const CartForm = props => {
     const valor = input.value;
     setPhone(valor);
   };
-  const saveEmail = e => {
-    const input = e.target;
-    const valor = input.value;
-    setEmail(valor);
-  };
+  // const saveEmail = e => {
+  //   const input = e.target;
+  //   const valor = input.value;
+  //   setEmail(valor);
+  // };
   // const handleBuy = () => {
   // if (validation()) {
   // setError(false);
@@ -130,14 +130,14 @@ const CartForm = props => {
                 onChange={saveName}
               />
             </Form.Group>
-            <Form.Group className="mb-3">
+            {/* <Form.Group className="mb-3">
               <Form.Control
                 className="border-radius-como border-color-como"
                 type="text"
                 placeholder="tucorreo@email.com "
                 onChange={saveEmail}
               />
-            </Form.Group>
+            </Form.Group> */}
             <Form.Group className="mb-3">
               <Form.Control
                 className="border-radius-como border-color-como"
@@ -146,20 +146,20 @@ const CartForm = props => {
                 onChange={savePhone}
               />
             </Form.Group>
-            <Form.Group
+            {/* <Form.Group
               className="mb-3"
               controlId="exampleForm.ControlTextarea1"
-            >
-              <Form.Label className="fontTitle mt-2 mb-3 p-1 fs-3  ">
+            > */}
+            {/* <Form.Label className="fontTitle mt-2 mb-3 p-1 fs-3  ">
                 Anotaciones
-              </Form.Label>
-              <Form.Control
+              </Form.Label> */}
+            {/* <Form.Control
                 className="border-radius-como border-color-como"
                 as="textarea"
                 rows={3}
                 placeholder="Me gustaría ordenar un ..."
-              />
-            </Form.Group>
+              /> */}
+            {/* </Form.Group> */}
             <Row>
               <Col xs={6}>
                 {/* {error ? (
@@ -190,7 +190,7 @@ const CartForm = props => {
                     value={context.totalPrice2}
                   />
                   <input type="hidden" name="name" value={name} />
-                  <input type="hidden" name="email" value={email} />
+                  {/* <input type="hidden" name="email" value={email} /> */}
                   <input type="hidden" name="number" value={phone} />
 
                   <input
