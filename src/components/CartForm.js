@@ -122,53 +122,7 @@ const CartForm = props => {
             Datos de contacto
           </Card.Title>
           <Card.Body>
-            {/* <Form.Group className="mb-3">
-              <Form.Control
-                className="border-radius-como border-color-como"
-                type="text"
-                placeholder="Tu nombre"
-                onChange={saveName}
-              />
-            </Form.Group> */}
-            {/* <Form.Group className="mb-3">
-              <Form.Control
-                className="border-radius-como border-color-como"
-                type="text"
-                placeholder="tucorreo@email.com "
-                onChange={saveEmail}
-              />
-            </Form.Group> */}
-            {/* <Form.Group className="mb-3">
-              <Form.Control
-                className="border-radius-como border-color-como"
-                type="text"
-                placeholder="Tú telefono (1112345678)"
-                onChange={savePhone}
-              />
-            </Form.Group> */}
-            {/* <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            > */}
-            {/* <Form.Label className="fontTitle mt-2 mb-3 p-1 fs-3  ">
-                Anotaciones
-              </Form.Label> */}
-            {/* <Form.Control
-                className="border-radius-como border-color-como"
-                as="textarea"
-                rows={3}
-                placeholder="Me gustaría ordenar un ..."
-              /> */}
-            {/* </Form.Group> */}
             <Row>
-              {/* <Col xs={6}> */}
-              {/* {error ? (
-                  <Form.Text className="fw-bold text-primary">
-                    Por favor, complete todos los campos
-                  </Form.Text>
-                ) : null} */}
-              {/* </Col> */}
-              {/* <Col xs={6} className="text-end"> */}
               <form
                 action="https://node-mp-como.herokuapp.com/checkout"
                 // action="http://localhost:3000/checkout"
@@ -177,7 +131,7 @@ const CartForm = props => {
                 <input
                   type="hidden"
                   name="cartItems"
-                  value={context.mpItems}
+                  value={JSON.stringify(context.mpItems)}
                 />
                 <input
                   type="hidden"
@@ -201,8 +155,7 @@ const CartForm = props => {
                   placeholder="Juanx Pérez"
                   // value={name}
                 />
-                {/* <input type="hidden" name="email" value={email} /> */}
-                {/* <input type="hidden" name="number" /> */}
+
                 <label for="inputPhone" class="form-label">
                   Teléfono
                 </label>
@@ -213,10 +166,7 @@ const CartForm = props => {
                   required
                   type="number"
                   placeholder="Solo números (ejemplo 1123456789)"
-
-                  // value={name}
                 />
-                {/* <input type="hidden" name="number" /> */}
                 <label for="inputEmail" class="form-label">
                   Email
                 </label>
@@ -227,7 +177,6 @@ const CartForm = props => {
                   type="email"
                   required
                   placeholder="juanx@perez.com"
-                  // value={name}
                 />
 
                 <input
@@ -236,16 +185,6 @@ const CartForm = props => {
                   type="submit"
                 />
               </form>
-              {/* <Button
-                  className="py-2 pe-2 ps-1 mt-1 me-0 border-radius-como button-color-como border-0"
-                  onClick={() => handleBuy()}
-                >
-                  <span className="ms-3 me-2 fw-bold fs-6">
-                    Ir a pagar
-                  </span>
-                </Button> */}
-              {/* {loading ? <MyLoader /> : null} */}
-              {/* </Col> */}
             </Row>
           </Card.Body>
         </Card>
