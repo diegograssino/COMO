@@ -12,9 +12,9 @@ const CartContext = ({ children }) => {
   useEffect(() => {
     setTotalQ(items.reduce((sum, item) => sum + item.q, 0));
     setTotalPrice(
-      Intl.NumberFormat('en-IN', {
+      Intl.NumberFormat('es-AR', {
         style: 'currency',
-        currency: 'USS',
+        currency: 'ARS',
         minimumFractionDigits: 2,
       }).format(
         items.reduce((sum, item) => sum + item.price * item.q, 0)
