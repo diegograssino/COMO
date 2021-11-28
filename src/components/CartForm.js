@@ -1,5 +1,5 @@
-import React, { useContext } from 'react';
-import { Card, Col, Row } from 'react-bootstrap';
+import React, { useContext, useState } from 'react';
+import { Card, Col, Row, Form } from 'react-bootstrap';
 import Context from '../contexts/Context';
 // import { firestore } from '../firebase';
 // import MyLoader from './MyLoader';
@@ -7,42 +7,42 @@ import Context from '../contexts/Context';
 
 const CartForm = props => {
   let context = useContext(Context);
-  // const [name, setName] = useState('');
-  // const [phone, setPhone] = useState('');
-  // const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('');
   // const [error, setError] = useState(false);
   // const [loading, setLoading] = useState();
 
-  // const saveName = e => {
-  //   const input = e.target;
-  //   const valor = input.value;
-  //   setName(valor);
-  // };
-  // const savePhone = e => {
-  //   const input = e.target;
-  //   const valor = input.value;
-  //   setPhone(valor);
-  // };
-  // const saveEmail = e => {
-  //   const input = e.target;
-  //   const valor = input.value;
-  //   setEmail(valor);
-  // };
+  const saveName = e => {
+    const input = e.target;
+    const valor = input.value;
+    setName(valor);
+  };
+  const savePhone = e => {
+    const input = e.target;
+    const valor = input.value;
+    setPhone(valor);
+  };
+  const saveEmail = e => {
+    const input = e.target;
+    const valor = input.value;
+    setEmail(valor);
+  };
   // const handleBuy = () => {
-  //   // if (validation()) {
-  //   setError(false);
-  //   setLoading(true);
-  //   const buyer = { name: name, mail: email, phone: phone };
-  //   const total = context.totalPrice;
-  //   const date = new Date();
-  //   const cart = context.items;
-  //   firestore
-  //     .collection('orders')
-  //     .add({ buyer, cart, date, total })
-  //     .then(res => props.setShowOrder(res.id));
-  //   // } else {
-  //   //   setError(true);
-  //   // }
+  // if (validation()) {
+  // setError(false);
+  // setLoading(true);
+  // const buyer = { name: name, mail: email, phone: phone };
+  // const total = context.totalPrice;
+  // const date = new Date();
+  // const cart = context.items;
+  // firestore
+  //   .collection('orders')
+  //   .add({ buyer, cart, date, total })
+  //   .then(res => props.setShowOrder(res.id));
+  // } else {
+  //   setError(true);
+  // }
   // };
   // const validation = () => {
   //   console.log(`name: ${validator.isAlpha(name)}`);
@@ -113,40 +113,12 @@ const CartForm = props => {
   //     },
   //   });
   // };
-  console.log(context.totalPrice);
+  // console.log(context.totalPrice);
   return (
     <Row>
       <Col className="p-2" xs={12}>
         <Card className="border-0 bg-color-como">
-          {/* <Button onClick={() => handleMercadoPago(context.mpItems)}>
-            Comprar ahora!
-          </Button> */}
-          <form
-            action="https://node-mp-como.herokuapp.com/checkout"
-            method="POST"
-          >
-            <input
-              type="hidden"
-              name="title"
-              value="Productos varios COMO"
-            />
-            <input
-              type="hidden"
-              name="unit_price"
-              value={context.totalPrice2}
-            />
-            {/* <input
-              type="hidden"
-              name="picture_url"
-              value={context.items.image}
-            /> */}
-            <input
-              value="Comprar ahora"
-              class="btn btn-primary btn-block"
-              type="submit"
-            />
-          </form>
-          {/* <Card.Title className="fontTitle ps-3 mt-2 fs-3 text-start">
+          <Card.Title className="fontTitle ps-3 mt-2 fs-3 text-start">
             Datos de contacto
           </Card.Title>
           <Card.Body>
@@ -190,26 +162,55 @@ const CartForm = props => {
             </Form.Group>
             <Row>
               <Col xs={6}>
-                {error ? (
+                {/* {error ? (
                   <Form.Text className="fw-bold text-primary">
                     Por favor, complete todos los campos
                   </Form.Text>
-                ) : null}
+                ) : null} */}
               </Col>
               <Col xs={6} className="text-end">
-                <Button
+                <form
+                  // action="https://node-mp-como.herokuapp.com/checkout"
+                  action="http://localhost:3000/checkout"
+                  method="POST"
+                >
+                  <input
+                    type="hidden"
+                    name="cartItems"
+                    value={context.mpItems}
+                  />
+                  <input
+                    type="hidden"
+                    name="title"
+                    value="Productos varios COMO"
+                  />
+                  <input
+                    type="hidden"
+                    name="unit_price"
+                    value={context.totalPrice2}
+                  />
+                  <input type="hidden" name="name" value={name} />
+                  <input type="hidden" name="email" value={email} />
+                  <input type="hidden" name="number" value={phone} />
+
+                  <input
+                    value="Comprar ahora"
+                    className="py-2 px-3 mt-1 me-0 border-radius-como button-color-como border-0"
+                    type="submit"
+                  />
+                </form>
+                {/* <Button
                   className="py-2 pe-2 ps-1 mt-1 me-0 border-radius-como button-color-como border-0"
                   onClick={() => handleBuy()}
                 >
                   <span className="ms-3 me-2 fw-bold fs-6">
                     Ir a pagar
-                    <FaArrowCircleRight className="ms-2" />
                   </span>
-                </Button>
-                {loading ? <MyLoader /> : null}
+                </Button> */}
+                {/* {loading ? <MyLoader /> : null} */}
               </Col>
             </Row>
-          </Card.Body> */}
+          </Card.Body>
         </Card>
       </Col>
     </Row>

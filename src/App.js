@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
+import Feedback from './components/Feedback';
 import ItemDetailContainer from './components/ItemDetailContainer';
 
 function App() {
@@ -18,11 +19,28 @@ function App() {
         <MyNavbar />
         <Route path="/" component={Home} exact />
         <Route path="/about" component={About} exact />
-        <Route path="/productos/:id" component={ItemListContainer} exact />
-        <Route path="/item/:id" component={ItemDetailContainer} exact />
-        <Route path="/productos" component={ItemListContainer} exact />
-        <Route path="/category/:id" component={ItemListContainer} exact />
+        <Route
+          path="/productos/:id"
+          component={ItemListContainer}
+          exact
+        />
+        <Route
+          path="/item/:id"
+          component={ItemDetailContainer}
+          exact
+        />
+        <Route
+          path="/productos"
+          component={ItemListContainer}
+          exact
+        />
+        <Route
+          path="/category/:id"
+          component={ItemListContainer}
+          exact
+        />
         <Route path="/contact" component={Contact} exact />
+        <Route path="/feedback" component={Feedback} exact />
         <Route path="/cart" component={Cart} exact />
       </BrowserRouter>
       <Footer />
