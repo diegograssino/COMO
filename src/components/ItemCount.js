@@ -67,7 +67,7 @@ const ItemCount = props => {
           </Row>
         </Col>
         <Col xs={12} lg={4} className="mt-2">
-          <Link to="/">
+          <Link to={{pathname: "https://api.whatsapp.com/send?phone=5491138499203&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20...%20" }} target="_blank">
             <Button className="w-100 border-radius-como button-color-wp border-0 py-3">
               <FaWhatsapp className="me-1 fs-4 pb-1" />
               Consultas?

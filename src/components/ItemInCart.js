@@ -24,7 +24,7 @@ const ItemInCart = props => {
         </Link>
       </Col>
       <Col xs={12} lg={4} className="mt-2">
-        <Link to="/">
+        <Link to="/productos">
           <Button className="border-radius-como button-color-como border-0 py-3 w-100">
             Seguir comprando
           </Button>
