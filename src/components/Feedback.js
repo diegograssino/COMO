@@ -19,7 +19,6 @@ const Feedback = () => {
             target="_blank"
           >
             <Button className=" border-radius-como button-color-wp border-0 py-3">
-              git
               <FaWhatsapp className="me-1 fs-4 pb-1" />
               Aviso de pedido
             </Button>
