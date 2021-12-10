@@ -7,16 +7,16 @@ import imagen4 from '../assets/img/about4.jpg';
 import '../css/index.css';
 
 const About = () => {
-
-
-  
   return (
     <Container>
       <Row>
         <Col md={12} className=" text-center aboutContainer">
-          <h1 className="tituloAbout" id="about">Nosotros</h1>
+          <h1 className="tituloAbout" id="about">
+            Nosotros
+          </h1>
           <p className="subtituloAbout">
-            Somos Ceci y Pachu. Amigos hace años. Un día nos unimos para crear este hermoso proyecto.
+            Somos COMO. Cómo? cocineros que se juntan y hacen lo que mas les gusta Como? si, vendemos lo que hacemos y
+            vas a poder comer bien. Como... digamos, como un lugar del bien, de encuentro.
           </p>
           <Container className="imagenesAbout">
             <Row>

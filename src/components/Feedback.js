@@ -7,15 +7,19 @@ const Feedback = () => {
   return (
     <Col className=" vh-100 d-flex flex-column align-content-center justify-content-center text-center containerHome2">
       <Row>
-        <h2 className="px-5 text-light" >
-          Su pago fué realizado con éxito, recuerde enviar Whatsapp para
-          confirmar su pedido, Gracias por su compra!!!.
-        </h2>
+        <h2 className="px-5 text-light">¡Gracias por tu compra!.</h2>
       </Row>
       <Row>
         <Col xs={12} lg={4} className="t-center m-auto ">
-          <Link to={{ pathname: "https://api.whatsapp.com/send?phone=5491138499203&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20...%20" }} target="_blank">
+          <Link
+            to={{
+              pathname:
+                'https://api.whatsapp.com/send?phone=5491138499203&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20...%20',
+            }}
+            target="_blank"
+          >
             <Button className=" border-radius-como button-color-wp border-0 py-3">
+              git
               <FaWhatsapp className="me-1 fs-4 pb-1" />
               Aviso de pedido
             </Button>
@@ -23,7 +27,6 @@ const Feedback = () => {
         </Col>
       </Row>
     </Col>
-
   );
 };
 
